@@ -104,6 +104,14 @@ body {
 /* overviewセクション */
 
 /* 親要素をフレックスボックスにして横に並べる */
+
+.overview-label{
+font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
 .overview-body {
   display: flex;
   justify-content: space-between;
@@ -255,6 +263,51 @@ body {
   max-width: 600px;
   margin: 0 auto;
 }
+
+
+
+/* --- パターン1: 結論下のボタン --- */
+/* --- 大切なボタンをより大きく、印象的に --- */
+.view-site-container {
+  margin: 80px 0; /* 上下の余白を広げて、ボタンを孤立（強調）させる */
+  text-align: center;
+}
+
+.btn-view-site {
+  display: inline-block;
+  /* パディングを大きくして、ボタンそのものの体積を増やします */
+  padding: 20px 60px; 
+  
+  border: 1.5px solid #a67c52; /* 線を少しだけ太くして存在感を出す */
+  color: #a67c52;
+  text-decoration: none;
+  
+  /* 文字の主張を強める */
+  font-family: "serif";
+  font-size: 1.2rem; /* 文字サイズを大きく */
+  font-weight: 500;
+  letter-spacing: 0.15em; /* 文字の間隔を広げて気品を出す */
+  
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* 動きを滑らかに */
+  position: relative;
+  background: transparent;
+  z-index: 1;
+}
+
+/* ホバー時の挙動：色を塗りつぶして「押せる感」を強調 */
+.btn-view-site:hover {
+  color: #fff;
+  background-color: #a67c52;
+  transform: translateY(-5px); /* 少し上に浮き上がらせる */
+  box-shadow: 0 10px 25px rgba(166, 124, 82, 0.2); /* 影をつけて立体感を出す */
+}
+
+.btn-view-site .arrow {
+  display: inline-block;
+  margin-left: 15px;
+  transition: transform 0.4s ease;
+}
+
 
 /* 技術的こだわりセクション */
 .tech-section {

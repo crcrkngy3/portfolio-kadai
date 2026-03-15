@@ -1,0 +1,50 @@
+/* 全体の余白をリセット */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* 画面全体のレイアウト */
+.hero-section {
+    width: 100%;
+    min-height: 100vh;      /* 最低でも画面の高さ分。中身が長ければ伸びる */
+    display: flex;
+    justify-content: center;
+    align-items: center;     /* 中身が短いときは上下中央、長いときは自動調整 */
+    padding: 40px 0;         /* 上下がキツキツにならないように余白を追加 */
+    background-color: #fdfdfd;
+}
+
+/* 画像と文字を囲む箱 */
+.main-visual {
+    display: flex;
+    flex-direction: column;  /* 上から下に並べる（文字、画像の順） */
+    align-items: center;     /* 中身を左右中央に揃える */
+    text-align: center;
+    max-width: 90%;          /* 画面幅いっぱいに広がりすぎないように */
+}
+
+/* 画像（GIF）のサイズ調整 */
+.main-visual img {
+    width: 100%;             /* 親要素の幅に合わせる */
+    max-width: 800px;        /* 大きくなりすぎないように制限 */
+    height: auto;
+    border-radius: 8px;      /* 角を少し丸くすると柔らかい印象になります */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* 軽い影をつけて立体感を出す */
+}
+
+/* 文字の部分（画像の上に配置） */
+.hero-text {
+    margin-bottom: 20px;     /* 画像との間に余白を作る */
+}
+
+.hero-text h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.hero-text p {
+    font-size: 16px;
+    color: #666;
+}

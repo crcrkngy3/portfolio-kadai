@@ -1,26 +1,100 @@
-.header {
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  width: 100%;
+@charset "UTF-8"
+
+/* 共通部分 */
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
+  line-height: 1.7;
+  color: #432;
+}
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+/* レイアウト ※これ必要？ */
+.align-center {
+  text-align: center;
+}
+
+/* 見出し */
+.font-english {
+  font-family: 'Philosopher', sans-serif;
+  font-weight: normal;
+}
+
+/* header */
+
+.page-header {
+  padding-top: .5rem;
   background-color: #F5EEE2;
 }
 
-.header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 40px;
+.logo {
+ width: 210px;
 }
 
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  font-size: 1.5rem;
+  list-style: none;
+}
+
+.main-nav a {
+  color: #432;
+}
+
+.main-nav a:hover{
+  color: #7E9A82;
+}
+
+
+
 /* main画像の幅調整 */
-.main-visual , .dounyu , .benefit, .tuyomi , .sigoto , .otoiawase{
+.main-visual , .dounyu , .benefit, .tuyomi , .sigoto , .otoiawase , .button{
+
   width: 100%;    /* これで画面（親要素）の横幅いっぱいになります */
   height: auto;   /* 縦横比を崩さないために必須です */
   display: block; /* 画像の下にできる数ピクセルの隙間を消します */
 }
 
-body {
-  margin: 0;
-  padding: 0;
+/* ボタン */
+.btn{
+  display: inline-block;
+  font-size: 1.5rem;
+  background-color: #7E9A82;
+  color: #fff;
+  border-radius: 8px;
+  padding: .75rem 1.5rem;
+  transition: .5s;
+}
+.btn:hover{
+  background-color: green;
+}
+
+/* footer */
+.page-footer{
+  text-align: center;
+  padding-top: .5rem;
+  background-color: #F5EEE2;
+}
+
+.SNS {
+ display: flex;
+ justify-content: space-around;
+}
+
+/* copyright */
+.copyright{
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 6rem;
+  color: #432;
 }

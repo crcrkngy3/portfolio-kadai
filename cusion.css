@@ -40,66 +40,6 @@ body {
 
 
 
- /* メインビジュアルの設定 */
-#main-visual {
-  min-height: 60vh;          
-  display: flex;             
-  justify-content: center; 
-  align-items: center;       
-  position: relative;        
-  overflow: hidden;    
-  padding: 60px 0;      
-}
-
-/* 1枚の画像の設定 */
-.cushion-image {
-  width: 100%;               
-  max-width: 1200px;         
-  height: auto;              
-  display: block;
-}
-
-/* 説明文（初期状態：隠す） */
-#main-message {
-  position: absolute;        
-  top: 50%;                 
-  left: 50%;                
-  transform: translate(-50%, -50%); 
-  
-  width: 80%;                
-  max-width: 800px;          
-  padding: 40px;             
-  background-color: rgba(255, 255, 255, 0.9); 
-  border-radius: 10px;       
-
-  opacity: 0;                
-  visibility: hidden;       
-  transition: all 0.8s ease; 
-  text-align: center;        
-  color: #333;              
-}
-
-/* ホバー時の動き（画像全体にマウスが乗ったとき） */
-#main-visual:hover #main-message {
-  opacity: 1;                
-  visibility: visible;      
-}
-
-/* 説明文の中の見出し（h1をmessage-titleに変更） */
-.message-title {
-  font-family: "serif";       
-  font-size: 2.5rem;          
-  margin-bottom: 20px;      
-  color: #a67c52;            
-}
-
-/* 説明文の中のテキスト（pをmessage-textに変更） */
-.message-text {
-  font-size: 1.2rem;         
-  line-height: 2.0;           
-  text-align: center;           
-}
-
 
 /* overviewセクション */
 

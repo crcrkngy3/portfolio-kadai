@@ -17,10 +17,7 @@ a {
 img {
   max-width: 100%;
 }
-/* レイアウト ※これ必要？ */
-.align-center {
-  text-align: center;
-}
+
 
 /* 見出し */
 .font-english {
@@ -29,13 +26,28 @@ img {
 }
 
 /* header */
+.header-container {
+  display: flex;
+  justify-content: space-between; /* ロゴを左、メニューを右に飛ばす */
+  align-items: center;           /* 上下中央揃え */
+  padding: 0 20px;               /* 画面端の余白 */
+  max-width: 1200px;             /* 広がりすぎ防止 */
+  margin: 0 auto;
+}
+
+/* h1の余計な余白を消しておく */
+.logo-area {
+  margin: 0;
+  line-height: 1;
+}
+
 
 .page-header {
   padding-top: .5rem;
   background-color: #F5EEE2;
 }
 
-.logo {
+.logo-intro{
  width: 210px;
 }
 
@@ -58,12 +70,36 @@ img {
 
 
 /* main画像の幅調整 */
-.main-visual , .dounyu , .benefit, .tuyomi , .sigoto , .otoiawase , .button{
 
-  width: 100%;    /* これで画面（親要素）の横幅いっぱいになります */
-  height: auto;   /* 縦横比を崩さないために必須です */
-  display: block; /* 画像の下にできる数ピクセルの隙間を消します */
+.section-padding{
+   padding: 80px 0;
 }
+.main-visual , .dounyu ,.benefit ,.tuyomi ,.otoiawase{
+  display: block;
+  margin-left: auto;   
+  margin-right: auto;  
+  width: 100%;         
+  max-width: 1000px;
+}
+
+.shigotozukann {
+  margin-top: 100px;
+   display: flex;
+   justify-content: center; 
+   gap: 20px;
+  
+}
+
+.zukann {
+  text-align: center;      
+  flex: 1;                 
+}
+
+.section-closing{
+   margin-bottom: 120px;
+}
+
+
 
 /* ボタン */
 .btn{
@@ -79,6 +115,10 @@ img {
   background-color: green;
 }
 
+.align-center {
+  margin-top: 70px;
+   text-align: center;
+}
 /* footer */
 .page-footer{
   text-align: center;
@@ -86,7 +126,12 @@ img {
   background-color: #F5EEE2;
 }
 
+.logo-closing{
+  padding: 2rem 0;
+}
+
 .SNS {
+  padding: 2rem 0;
  display: flex;
  justify-content: space-around;
 }
@@ -95,6 +140,39 @@ img {
 .copyright{
   text-align: center;
   padding: 2rem 0;
-  margin-top: 6rem;
+  margin-top: 1rem;
   color: #432;
+}
+
+/* レスポンシブルデザイン */
+
+/* 画面幅が767px以下のとき（スマホ・タブレット用） */
+@media screen and (max-width: 767px) {
+  
+  /* メニューを縦並びにするか、文字を小さくする */
+  .main-nav {
+    flex-direction: column; /* 縦に並べる */
+    gap: 1rem;
+    font-size: 1.1rem;      /* 文字をスマホサイズに */
+    padding: 0;
+    text-align: center;
+  }
+
+  /* お仕事図鑑を横並びから縦並びに変える */
+  .shigotozukann {
+    flex-direction: column; /* これで縦に並ぶ！ */
+    align-items: center;
+    gap: 50px;              /* 縦に並んだ時の間隔 */
+    
+  }
+
+  /* ロゴなどのサイズ調整 */
+  .logo {
+    width: 150px;
+  }
+
+  /* 共通の余白も少し狭くする */
+  .section-padding {
+    padding: 40px 0;
+  }
 }

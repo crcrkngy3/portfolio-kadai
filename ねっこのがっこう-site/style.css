@@ -1,23 +1,219 @@
-.image-container {
+@charset "UTF-8"
+
+/* 共通部分 */
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
+  line-height: 1.7;
+  color:#000000;
+}
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/* 見出し */
+.font-english {
+  font-family: 'Philosopher', sans-serif;
+  font-weight: normal;
+}
+
+/* header */
+.header-container {
   display: flex;
-  align-items: flex-start; /* 上端を揃える */
-  width: 100%;             /* 画面幅いっぱいにする */
-  gap: 15px;               /* 画像同士の隙間を適度にあける */
+  justify-content: space-between; /* ロゴを左、メニューを右に飛ばす */
+  align-items: center;           /* 上下中央揃え */
+  padding: 0 20px;               /* 画面端の余白 */
+  max-width: 1200px;             /* 広がりすぎ防止 */
+  margin: 0 auto;
 }
 
-.item {
-  flex: 1;                 /* 3つの要素を均等に100%まで広げる */
+/* h1の余計な余白を消しておく */
+.logo-area {
+  margin: 0;
+  line-height: 1;
 }
 
-.item img {
-  width: 100%;             /* 画像を親の幅いっぱいに広げる */
-  height: auto;
+
+.page-header {
+  padding-top: .5rem;
+  background-color: #FFF;
+}
+
+.logo-intro{
+ width: 210px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  font-size: 1.5rem;
+  list-style: none;
+}
+
+.main-nav a {
+  color: #000000;
+}
+
+.main-nav a:hover{
+  color: #7E9A82;
+}
+
+/* main画像の幅調整 */
+
+.section-padding{
+   padding: 80px 0;
+}
+
+.main-visual , .button1 , .introduction ,.katudounaiyou , .taisei{
+  margin-top: 100px;
   display: block;
+  margin-left: auto;   
+  margin-right: auto;  
+  width: 100%;         
+  max-width: 1000px;
 }
 
-.label {
-  font-size: 16px;
-  font-weight: bold;
-  padding-bottom: 8px;     /* 文字と画像の間の余白 */
-  text-align: left;        /* 文字を左寄せにする */
+.article {
+  margin-top: 100px;
+   display: flex;
+   justify-content: center; 
+   gap: 20px;
+  
+}
+
+.interview {
+  text-align: center;      
+  flex: 1;                 
+}
+
+
+/* 参加ボタン */
+.button-container {
+  text-align: center; 
+  width: 100%;       
+}
+
+.sanka-button {
+  position :relative ; 
+  display: inline-block; 
+  margin: 70px auto 50px; 
+}
+
+.kazari1 {
+  display: block;
+  position: absolute;
+  top: -50px;   
+  left: -40px;   
+  width: 50px;
+}
+
+/* 右下の装飾 */
+.kazari2 {
+  display: block;
+  position: absolute;
+  bottom: -60px; /* ボタンの下端からの距離 */
+  right: -40px;  /* ボタンの右端からの距離 */
+  width: 60px;
+}
+
+.button {
+  display: inline-block;
+  font-size: 3rem;
+  background-color: #ffc145;
+  color: #FFF;
+  border-radius: 8PX;
+  padding: .75rem 1.5rem;
+}
+
+.button:hover{
+  background-color: #f4a406;
+}
+
+
+
+/* footer */
+.info {
+  width: 100%;
+  max-width: 544px;
+  margin: auto;
+  padding:  0 1.5rem;
+}
+
+.info th  {
+ text-align: left;
+ font-weight: normal;
+ padding: 1rem;
+}
+
+.info td {
+ padding: 1rem 0;
+}
+
+
+.page-footer{
+  text-align: center;
+  padding-top: .5rem;
+  background-color: #fff;
+}
+
+.logo-closing{
+  padding: 2rem 0;
+}
+
+.SNS {
+  padding: 2rem 0;
+ display: flex;
+ justify-content: space-around;
+}
+
+/* copyright */
+.copyright{
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 1rem;
+  color: #000000;
+}
+
+
+
+/* レスポンシブルデザイン */
+
+/* 画面幅が767px以下のとき（スマホ・タブレット用） */
+@media screen and (max-width: 767px) {
+  
+  /* メニューを縦並びにするか、文字を小さくする */
+  .main-nav {
+    flex-direction: column; /* 縦に並べる */
+    gap: 1rem;
+    font-size: 1.1rem;      /* 文字をスマホサイズに */
+    padding: 0;
+    text-align: center;
+  }
+
+  /* お仕事図鑑を横並びから縦並びに変える */
+  .article {
+    flex-direction: column; /* これで縦に並ぶ！ */
+    align-items: center;
+    gap: 50px;              /* 縦に並んだ時の間隔 */
+    
+  }
+
+  /* ロゴなどのサイズ調整 */
+  .logo {
+    width: 150px;
+  }
+
+  /* 共通の余白も少し狭くする */
+  .section-padding {
+    padding: 40px 0;
+  }
 }

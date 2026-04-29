@@ -1,32 +1,192 @@
+@charset "UTF-8"
 
 
-/* サイト全体の箱です */
+/* ----------
+共通部分 
+-------------*/
+body{
+  font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  font-size: 16px;
+  letter-spacing: .05em;
+  color: #000000;
+}
+
+a{
+  text-decoration: none;
+  color: #000000
+}
+a:hover{
+  color: #9B6E56;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  border-style: none;
+}
+
+.pc-only {
+  display: block;
+}
+
+.sp-only {
+  display: none;
+}
+
+
+
+/*----------
+ サイト全体に効かせる設定
+ ----------- */
+
 .wrapper{
-
+   /* headerのサイズに合わせてメインの始まりの場所を調整する、今は73pxにしている */
+  padding-top: 73px;
 }
 
-/* header */
+.section {
+  padding: 90px 0;
+}
+
+
+.section:nth-of-type(odd) {
+  /* 奇数だけ背景色付ける */
+  background-color: #f7f7f7;
+}
+
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+ul {
+  list-style: none;
+}
+
+/*----------
+ それぞれのメニュー（目次）の装飾 
+ -----------*/
+
+.title {
+  font-size: 22px;
+  font-weight: 1000;
+  line-height: 1;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: .05em;
+  color: #585252;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title::before {
+  content: '';
+  width: 28px;  
+  height: 2px;  
+  background-color: #9B6E56; 
+  margin-right: 15px;      
+}
+
+.title::after {
+  content: '';
+  width: 28px;  
+  height: 2px;  
+  background-color: #9B6E56; 
+  margin-left: 15px;      
+}
+
+/*---------
+ CONTACTのすぐ下の文章にだけ反映
+ ---------- */
+
+.lead {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+
+/*----------
+ header 
+ -----------*/
+
 .header{
-
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #fff;
 }
 
-.container{
-
+.header .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
 }
+
 .header-logo{
-
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-right: 20px;
+  letter-spacing: .05em;
 }
-/* ナビゲーションメニュー */
-.gnav{
 
+/* ロゴだけ色少し変える */
+.header-logo a{
+  color: #585252;
 }
+.header-logo a:hover {
+  transition: .3s;
+  color: #9B6E56;
+}
+
+/*----------
+ナビゲーションメニュー
+------------*/
 
 .gnav-list{
-
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
 }
-.gnav-item{
-
+/* 最後の項目以外間に20px空ける */
+.gnav-item:not(:last-child) {
+  margin-right: 20px;
 }
+
+.gnav-item a {
+  position: relative;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 0;
+  transition: .3s;
+  letter-spacing: .05em;
+}
+
+/* カーソール合わせた時に下に下線が出る仕様にする */
+.gnav-item a:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  content: "";
+  transition: .3s;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #000000;
+}
+
+.gnav-item a:hover:after {
+  width: 100%;
+}
+
 
 /* main */
 .content{
@@ -177,5 +337,5 @@ js-page-top
 
 }
 .copyright{
-  
+
 }

@@ -178,6 +178,7 @@ ul {
    -----------*/
 
 .mv{
+  margin-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -195,14 +196,28 @@ padding: 0 20px;
 
 
 /* サイトに移動するボタン */
-.view-site-container{
-  }
-.btn-view-site{
-
+.view-site-container {
+  margin: 80px 0; 
+  text-align: center;
 }
+.btn-view-site{
+  display: inline-block;
+    padding: 20px 60px; 
+     border: 1.5px solid #a67c52;
+     color: #9B6E56;
+     text-decoration: none;
+     font-family: "serif";
+     font-size: 1.2rem; 
+     font-weight: 500;
+     letter-spacing: 0.15em;
+    position: relative;
+  background: transparent;
+  z-index: 1;
+}
+.btn-view-site:hover {
+  color: #fff;
+  background-color: #9B6E56;
 
-.arrow{
-  /* 矢印のデザインです */
 }
 
 /* SKILL */
@@ -213,22 +228,42 @@ padding: 0 20px;
 #skill{
 
 }
-.container{
 
-}
-
-.title{
-
-}
 /* それぞれのテック */
 .tech-container{
-
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 .tech-card{
-
+ flex: 1;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03); /* 控えめな影 */
+  transition: transform 0.3s ease;
 }
 .tech-num{
+   font-family: "serif";
+  font-size: 0.9rem;
+  color: #a67c52;
+  border-bottom: 1px solid #a67c52;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.tech-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #585252;
+}
 
+.tech-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #000000;
 }
 
 /*CONCEPT */
@@ -239,69 +274,75 @@ padding: 0 20px;
 
 }
 
-.container{
-
-}
-
-.title{
-
-}
 /* 来訪者 */
 .works-detail{
-
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 .detail-row{
-
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+.detail-row.reverse {
+  flex-direction: row-reverse;
 }
 .detail-icon{
-
-}
-.detail-text{
-
-}
-/*  企業側*/
-.detail-row reverse{
-
-}
-
-.detail-icon{
-
-}
-.detail-text{
-
-}
-
-/* こだわり詳細 */
-.consept-text{
-
-}
-/* キャッチコピー */
-.bridge-section{
-
-}
-.bridge-line{
-
-}
-.bridge-content{
-
-}
-.summary-phrase{
-
-}
-.summary-description{
-
-}
-
-/* サイトに移動するボタン */
-.view-site-container{
-  }
-.btn-view-site{
+  width: 700px; 
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
   
 }
 
-.arrow{
-  /* 矢印のデザインです */
+.detail-text h3 {
+  font-family: "serif";
+  color: #9B6E56;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
 }
+.detail-text p {
+  line-height: 1.8;
+  color: #000000;
+}
+
+
+/* こだわり詳細 */
+.consept-text{
+  text-align: center;
+ font-size: 16px;
+ line-height: 2.0;
+  color: #000000;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* キャッチコピー */
+.bridge-section{
+ padding: 120px 20px;
+  text-align: center;
+  position: relative;
+}
+
+
+.summary-phrase{
+ font-family: "serif";
+  font-size: 20px;
+  color: #a67c52;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+.summary-description{
+font-family: "serif";
+text-align: center;
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
 
 /* TOPへ戻るボタン*/
 .page-top{
@@ -322,9 +363,6 @@ background-color: #b4b4b4;
 
 }
 
-.material-icons-outlined{
-
-}
 
 
 /* 以下JavaScriptで装飾する必要があります */
@@ -342,4 +380,92 @@ js-page-top
   font-size: 10px;
   text-align: center;
   color: #797979;
+}
+
+/*----------
+ スマホ用 
+ ------------*/
+
+@media (max-width: 768px) {
+   body {
+    font-size: 14px;
+  }
+
+  .pc-only {
+    display: none;
+  }
+
+  .sp-only {
+    display: block;
+  }
+  .title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .lead {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+ /* レイアウト */
+  .wrapper {
+    padding-top: 57px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  /* ヘッダー */
+  .header .container {
+    padding: 15px;
+  }
+
+  .header-logo {
+    font-size: 15px;
+    margin-right: 15px;
+  }
+
+  .gnav-item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .gnav-item a {
+    font-size: 10px;
+  }
+
+  .gnav-item a:after {
+    display: none;
+  }
+  /* POINT */
+  .consept-text{
+    font-size: 15px;
+    margin-right: 15px;
+  }
+
+  /* CONCEPT */
+
+.summary-phrase .summary-description{
+    font-size: 15px;
+    margin-right: 15px;
+}
+  /*  メインビジュアル */
+  .mv {
+    height: 40vh;
+  }
+
+  .mv-container {
+    padding: 0 20px;
+  }
+
+ 
+  /* フッター */
+  .footer {
+    padding: 20px;
+  }
 }

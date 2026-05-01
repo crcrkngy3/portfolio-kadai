@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MUKO Details</title>
+  <title>CANVAS Details</title>
   <meta charset="utf-8">
-  <meta name="description" content="ファッションブランドサイトMUKO作成に関しての説明文です">
+  <meta name="description" content="看護師転職サイトCANVASの作成に関しての説明文です">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link rel="stylesheet" href="cusion.css" >
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="cussion-style.css" >
 </head>
 <body>
   <!-- ヘッダー -->
@@ -17,81 +19,120 @@
         </h1>
         <nav class="gnav">
           <ul class="gnav-list">
-            <li class="gnav-item"><a href="index.html#works" target="_blank">WORKS</a></li>
-            <li class="gnav-item"><a href="index.html#skill" target="_blank">SKILL</a></li>
-            <li class="gnav-item"><a href="index.html#about" target="_blank">ABOUT</a></li>
-            <li class="gnav-item"><a href="index.html#contact" target="_blank">CONTACT</a></li>
+            <li class="gnav-item"><a href="cushion-kari.html#PREVIEW" >PREVIEW</a></li>
+            <li class="gnav-item"><a href="cushion-kari.html#SKILL" >SKILL</a></li>
+            <li class="gnav-item"><a href="cushion-kari.html#PERSONA" >PERSONA</a></li>
+            <li class="gnav-item"><a href="cushion-kari.html#POINT" >POINT</a></li>
+            <li class="gnav-item"><a href="cushion-kari.html#CONCEPT" >CONCEPT</a></li>
           </ul>
         </nav>
       </div>
   </header>
-  <main>
-    <article>
-  
+
+  <!-- main -->
+    <main class="content" id="PREVIEW">
+
+      <!-- mv -->
+      <div class="mv">
+        <div class="mv-container">
+          <img src="img/works/MUKO.png" alt="MUKOイメージ画像"> 
+        </div>
+      </div>
 
       <!-- サイトに移動するボタン -->
 <div class="view-site-container">
   <a href="MUKO-site/index.html" target="_blank" class="btn-view-site">
-    View Website <span class="arrow">→</span>
+    View Website →</span>
   </a>
 </div>
-   <!-- Overview / 制作概要 -->   
-   <section class="project-overview">
-  <div class="overview-header">
-    <span class="overview-label">Overview</span>
-    <h2 class="overview-title">ファッションブランドサイト</h2>
-  </div>
 
-  <div class="overview-body">
-    <div class="overview-info">
-      <dl>
-        <dt>Role</dt>
-        <dd>Design </dd>
-        <dt>Tools</dt>
-        <dd>Figma / GitHub</dd>
-        <dt>Concept</dt>
-        <dd>存在しないという「気配」の視覚化</dd>
-      </dl>
+
+ <!-- Technical Point / 技術的なこだわり -->
+  <!-- 以下HOMEと同じ仕様にするもしかしたら閉じタグ足りないかも -->
+<section class="skill section" id="SKILL">
+  <div class="container">
+        <h2 class="title">SKILL</h2>
+
+  <div class="tech-container">
+    <div class="tech-card">
+    <div class="tech-num">01</div>
+      <h3>Design / Figma(Prototyping)</h3>
+      <p>Figmaを用い、ブランドの世界観を体現するUIデザインを行いました。</p>
     </div>
 
-    <div class="overview-text">
-      <p>情報を網羅的に伝える一般的なWebサイトの設計とは異なり、<br>
-情報の「不在」や「余白」をコントロールすることで、ブランドの持つ神秘性と独自の美学を際立たせる設計を試みました。</p>
+    <div class="tech-card">
+      <div class="tech-num">02</div>
+      <h3>Management / GitHub</h3>
+      <p>GitHubを用いたバージョン管理を行い、制作のプロセスを可視化しています。<br>
+        コードの変更履歴を適切に残すことで、制作の確実性を高めるだけでなく、チーム開発や将来的なメンテナンスを見据えた、清潔で透明性の高い管理を習慣化しています。</p>
     </div>
+
+     <div class="tech-card">
+     <div class="tech-num">03</div>
+      <h3>Coding / VS Code</h3>
+      <p>VS Codeを用い、HTML/CSSでのコーディングを行いました。<br>
+         誰にとっても読みやすく、誠実なコードを書くことを意識しています。</p>
+    </div>
+    </div>
+
   </div>
 </section>
-<!-- 来訪者-依頼者の対話セクション -->
-<section class="works-detail">
+
+
+<!-- PERSONA-->
+ <section class="concept section" id="PERSONA">
+  <div class="container">
+        <h2 class="title">PERSONA</h2>
+
+<div class="works-detail">
   <div class="detail-row">
     <div class="detail-icon">
-      <img src="img/cushion/来訪者.png" alt="来訪者のアイコン">
-    </div>
-<div class="detail-text">
-      <h3>独自の哲学を持ち、本質的な質感を求める表現者様</h3>
+      <img src="img/cushion/来訪者.png" alt="来訪者のアイコン"></div>
+       
+         <div class="detail-text">
+         <h3>独自の哲学を持ち、本質的な質感を求める表現者様</h3>
       <p>「流行やロゴの強さに疲れ、もっと静かで、本質的なものに触れたい。」<br>
 「服という物質以上に、それが醸し出す空気や哲学を身に纏いたい。」</p>
-    </div>
+     </div>
+     
   </div>
 
   <div class="detail-row reverse">
     <div class="detail-icon">
-      <img src="img/cushion/制作者.png" alt="制作者のアイコン">
-    </div>
-    <div class="detail-text">
-      <h3>世界観を大切にしたいアパレルブランド様</h3>
-      <p>「『MUKO』は、売るためのブランドではなく、問いかけるためのブランドでありたい。
+      <img src="img/cushion/制作者.png" alt="制作者のアイコン"></div>
+           <div class="detail-text">
+           <h3>「『MUKO』は、売るためのブランドではなく、問いかけるためのブランドでありたい。
         衣服を「思考の依り代」と定義する私たちは完璧な実体を見せるのではなく、あえて『寄り』や『余白』をみせることで、見る人の想像力がブランドを完成させる。
 このサイトを通じて、デジタル空間に『静寂』と『存在感』を構築してほしいと依頼しました。」</p>
-    </div>
-  </div>
+           </div>
+   </div>
+   </div>
+   </div>
 </section>
+
+<!-- 要約の矢印マークを入れる -->
+ 
+<!-- こだわり詳細 -->
+ <section class="works section" id="POINT">
+    <div class="container">
+      <h2 class="title">POINT</h2>
+         <div class="consept-text">
+            <p>情報を網羅的に伝える一般的なWebサイトの設計とは異なり、<br>
+情報の「不在」や「余白」をコントロールすることで、ブランドの持つ神秘性と独自の美学を際立たせる設計を試みました。</p>
+    </p>
+         </div>
+    </div>
+</section>
+
+
+
 <!-- キャッチコピー（一言で伝える） -->
-<section class="bridge-section">
-  <div class="bridge-line"></div> <div class="bridge-content">
-    <p class="summary-label">Conclusion</p>
+ <section class="bridge-section" id="CONCEPT">
+        <div class="container">
+          <h2 class="title">CONCEPT</h2>
     <h3 class="summary-phrase">「纏う哲学を空間で共有する」</h3>
     <p class="summary-description">
-      ブランドが大切にする「纏う哲学」という定義が<br>
+        ブランドが大切にする「纏う哲学」という定義が<br>
       来訪者と深く共有される。<br>
       その静かな対話が生まれる空間をWeb上の余白や質感で表現しました。<br>
     
@@ -99,32 +140,29 @@
   </div>
 </section>
 
+
 <!-- サイトに移動するボタン -->
 <div class="view-site-container">
-  <a href="MUKO-site/index.html" target="_blank" class="btn-view-site">
+  <a href="MUKO-site/index.html"_blank" class="btn-view-site">
     View Website <span class="arrow">→</span>
   </a>
 </div>
- <!-- Technical Point / 技術的なこだわり -->
-<section class="tech-section">
-  <h2 class="section-title">Technical Identity</h2>
-  <div class="tech-container">
-    <div class="tech-card">
-    <div class="tech-num">01</div>
-      <h3>Design / Figma(Prototyping)</h3>
-      <p>Figmaを用い、ブランドの世界観を体現するUIデザインを行いました。</p>
-    </div>
-    <div class="tech-card">
-      <div class="tech-num">02</div>
-      <h3>Management / GitHub</h3>
-      <p>GitHubを用いたバージョン管理を行い、制作のプロセスを可視化しています。<br>
-        コードの変更履歴を適切に残すことで、制作の確実性を高めるだけでなく、チーム開発や将来的なメンテナンスを見据えた、清潔で透明性の高い管理を習慣化しています。</p>
-    </div>
+
+
+     <!-- TOPへ戻るボタン -->
+      <div class="page-top" id="js-page-top">
+        <span class="material-icons-outlined">expand_less</span>
+      </div>
+ 
+    <!-- footer -->
+    <footer class="footer">
+      <div class="copyright">&copy;TOZUKA MANAMI</div>
+    </footer>
+    <!-- /footer -->
+
   </div>
-</section>
-    </article>
-    
-  </main>
+  <!-- 以下jQueryと自分で書くjavascriptを読み込むためのコードです -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type='text/javascript' src="js/script.js"></script>
 </body>
 </html>
-

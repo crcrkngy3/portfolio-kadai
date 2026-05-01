@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ねっこの学校 Details</title>
+  <title>CANVAS Details</title>
   <meta charset="utf-8">
-  <meta name="description" content="里山キャンプねっこの学校の作成に関しての説明文です">
+  <meta name="description" content="看護師転職サイトCANVASの作成に関しての説明文です">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link rel="stylesheet" href="cusion.css" >
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="cussion-style.css" >
 </head>
 <body>
   <!-- ヘッダー -->
@@ -17,80 +19,120 @@
         </h1>
         <nav class="gnav">
           <ul class="gnav-list">
-            <li class="gnav-item"><a href="index.html#works" target="_blank">WORKS</a></li>
-            <li class="gnav-item"><a href="index.html#skill" target="_blank">SKILL</a></li>
-            <li class="gnav-item"><a href="index.html#about" target="_blank">ABOUT</a></li>
-            <li class="gnav-item"><a href="index.html#contact" target="_blank">CONTACT</a></li>
+            <li class="gnav-item"><a href="cushion-kari.html#PREVIEW" >PREVIEW</a></li>
+            <li class="gnav-item"><a href="cushion-kari.html#SKILL" >SKILL</a></li>
+            <li class="gnav-item"><a href="cushion-kari.html#PERSONA" >PERSONA</a></li>
+            <li class="gnav-item"><a href="cushion-kari.html#POINT" >POINT</a></li>
+            <li class="gnav-item"><a href="cushion-kari.html#CONCEPT" >CONCEPT</a></li>
           </ul>
         </nav>
       </div>
   </header>
-  <main>
-    <article>
-  
+
+  <!-- main -->
+    <main class="content" id="PREVIEW">
+
+      <!-- mv -->
+      <div class="mv">
+        <div class="mv-container">
+          <img src="img/works/ねっこのがっこう.png" alt="ねっこの学校イメージ画像"> 
+        </div>
+      </div>
 
       <!-- サイトに移動するボタン -->
 <div class="view-site-container">
   <a href="ねっこのがっこう-site/index.html" target="_blank" class="btn-view-site">
-    View Website <span class="arrow">→</span>
+    View Website →</span>
   </a>
 </div>
-   <!-- Overview / 制作概要 -->   
-   <section class="project-overview">
-  <div class="overview-header">
-    <span class="overview-label">Overview</span>
-    <h2 class="overview-title">里山キャンプサイト</h2>
-  </div>
 
-  <div class="overview-body">
-    <div class="overview-info">
-      <dl>
-        <dt>Role</dt>
-        <dd>Design / Coding / Planning</dd>
-        <dt>Tools</dt>
-        <dd>Figma / VS Code </dd>
-        <dt>Concept</dt>
-        <dd>伝説の夏休み。</dd>
-      </dl>
+
+ <!-- Technical Point / 技術的なこだわり -->
+  <!-- 以下HOMEと同じ仕様にするもしかしたら閉じタグ足りないかも -->
+<section class="skill section" id="SKILL">
+  <div class="container">
+        <h2 class="title">SKILL</h2>
+
+  <div class="tech-container">
+    <div class="tech-card">
+    <div class="tech-num">01</div>
+      <h3>Design / Figma(Prototyping)</h3>
+      <p>Figmaを用い、ブランドの世界観を体現するUIデザインを行いました。</p>
     </div>
 
-    <div class="overview-text">
-      <p>都会で育つ子供たちへ、一生モノの「本物の手触り」を届ける里山体験プログラムの公式サイトです。<br>
-画面の中の疑似体験ではなく、五感をフルに使い、時には泥にまみれる泥臭い体験が、子供たちの将来を支える強い「根っこ」になることを願い、設計しました。</p>
+    <div class="tech-card">
+      <div class="tech-num">02</div>
+      <h3>Management / GitHub</h3>
+      <p>GitHubを用いたバージョン管理を行い、制作のプロセスを可視化しています。<br>
+        コードの変更履歴を適切に残すことで、制作の確実性を高めるだけでなく、チーム開発や将来的なメンテナンスを見据えた、清潔で透明性の高い管理を習慣化しています。</p>
     </div>
+
+     <div class="tech-card">
+     <div class="tech-num">03</div>
+      <h3>Coding / VS Code</h3>
+      <p>VS Codeを用い、HTML/CSSでのコーディングを行いました。<br>
+         誰にとっても読みやすく、誠実なコードを書くことを意識しています。</p>
+    </div>
+    </div>
+
   </div>
 </section>
-<!-- 来訪者-依頼者の対話セクション -->
-<section class="works-detail">
+
+
+<!-- PERSONA-->
+ <section class="concept section" id="PERSONA">
+  <div class="container">
+        <h2 class="title">PERSONA</h2>
+
+<div class="works-detail">
   <div class="detail-row">
     <div class="detail-icon">
-      <img src="img/cushion/来訪者.png" alt="来訪者のアイコン">
-    </div>
-<div class="detail-text">
-      <h3>わが子に「本物の体験」をさせたい保護者様</h3>
+      <img src="img/cushion/来訪者.png" alt="来訪者のアイコン"></div>
+       
+         <div class="detail-text">
+         <h3>わが子に「本物の体験」をさせたい保護者様</h3>
       <p>「ゲームやYouTubeばかりの日常から、一度子供を連れ出したい。」<br>
 「自然の中で、たくましく成長するわが子の姿を見たい。」<br>「怪我や安全面は大丈夫か？」</p>
     </div>
+     
   </div>
 
   <div class="detail-row reverse">
     <div class="detail-icon">
-      <img src="img/cushion/制作者.png" alt="制作者のアイコン">
-    </div>
-    <div class="detail-text">
-      <h3>設計の、眼差し子供たちの「生きる力」を育みたい主催者様</h3>
-      <p>「『ねっこの学校』は、ただのレジャーではなく、一生忘れない『伝説の夏休み』を提供したい。
+      <img src="img/cushion/制作者.png" alt="制作者のアイコン"></div>
+           <div class="detail-text">
+           <h3>設計の、眼差し子供たちの「生きる力」を育みたい主催者様</h3>
+             <p>「『ねっこの学校』は、ただのレジャーではなく、一生忘れない『伝説の夏休み』を提供したい。
          このサイトを通じて、五感で感じる自然の尊さと、専門スタッフが見守るからこそできる『挑戦』の価値を届けてほしいと依頼しました。」</p>
-    </div>
-  </div>
+    /div>
+   </div>
+   </div>
+   </div>
 </section>
+
+<!-- 要約の矢印マークを入れる -->
+ 
+<!-- こだわり詳細 -->
+ <section class="works section" id="POINT">
+    <div class="container">
+      <h2 class="title">POINT</h2>
+         <div class="consept-text">
+            <p>都会で育つ子供たちへ、一生モノの「本物の手触り」を届ける里山体験プログラムの公式サイトです。<br>
+画面の中の疑似体験ではなく、五感をフルに使い、時には泥にまみれる泥臭い体験が、子供たちの将来を支える強い「根っこ」になることを願い、設計しました。</p>
+    </p>
+         </div>
+    </div>
+</section>
+
+
+
 <!-- キャッチコピー（一言で伝える） -->
-<section class="bridge-section">
-  <div class="bridge-line"></div> <div class="bridge-content">
-    <p class="summary-label">Conclusion</p>
+ <section class="bridge-section" id="CONCEPT">
+        <div class="container">
+          <h2 class="title">CONCEPT</h2>
     <h3 class="summary-phrase">「画面の中にはない、本物の手触り。」</h3>
     <p class="summary-description">
-     ポップで元気なビジュアルを採用しつつ、<br>
+      ポップで元気なビジュアルを採用しつつ、<br>
     「信頼と安全」を感じさせる情報を整理。<br>
     楽しさと安心感が共存するデザインで子供にとってはワクワクする冒険の入り口、<br>
     親にとっては安心して子供を預けられる信頼の窓口として機能させました。
@@ -98,33 +140,29 @@
   </div>
 </section>
 
+
 <!-- サイトに移動するボタン -->
 <div class="view-site-container">
   <a href="ねっこのがっこう-site/index.html" target="_blank" class="btn-view-site">
     View Website <span class="arrow">→</span>
   </a>
 </div>
- <!-- Technical Point / 技術的なこだわり -->
-<section class="tech-section">
-  <h2 class="section-title">Technical Identity</h2>
-  <div class="tech-container">
-    <div class="tech-card">
-      <div class="tech-num">01</div>
-      <h3>Design / Figma(Prototyping)</h3>
-      <p>Figmaを用い、ブランドの世界観を体現するUIデザインを行いました。</p>
-    </div>
- <div class="tech-card">
-      <div class="tech-num">02</div>
-      <h3>Management / GitHub</h3>
-      <p>GitHubを用いたバージョン管理を行い、制作のプロセスを可視化しています。<br>
-        コードの変更履歴を適切に残すことで、制作の確実性を高めるだけでなく、チーム開発や将来的なメンテナンスを見据えた、清潔で透明性の高い管理を習慣化しています。</p>
-    </div>
+
+
+     <!-- TOPへ戻るボタン -->
+      <div class="page-top" id="js-page-top">
+        <span class="material-icons-outlined">expand_less</span>
+      </div>
+ 
+    <!-- footer -->
+    <footer class="footer">
+      <div class="copyright">&copy;TOZUKA MANAMI</div>
+    </footer>
+    <!-- /footer -->
 
   </div>
-</section>
-    </article>
-    
-  </main>
+  <!-- 以下jQueryと自分で書くjavascriptを読み込むためのコードです -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type='text/javascript' src="js/script.js"></script>
 </body>
 </html>
-

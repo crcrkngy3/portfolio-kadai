@@ -173,16 +173,26 @@ ul {
   width: 100%;
 }
 
-  /* mein */
-.content{
+  /*----------
+   mein 
+   -----------*/
 
-}
 .mv{
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
 }
 .mv-container{
-
+position: relative;
+padding: 0 20px;
 }
+
+.mv-container img {
+  width: 100%;
+  height: auto;
+}
+
 
 /* サイトに移動するボタン */
 .view-site-container{
@@ -292,10 +302,22 @@ ul {
 .arrow{
   /* 矢印のデザインです */
 }
-/* TOPへ戻るボタン */
-.page-top{
 
+/* TOPへ戻るボタン*/
+.page-top{
+font-weight: bold;
+padding: 10px;
+cursor: pointer;
+text-align: center;
+background-color: #b4b4b4;
 }
+
+
+.page-top .material-icons-outlined {
+  vertical-align: bottom;
+  color: #fff;
+}
+
 #js-page-top{
 
 }
@@ -303,21 +325,21 @@ ul {
 .material-icons-outlined{
 
 }
-/*  footer*/
-.footer{
 
-}
-.copyright{
-
-}
 
 /* 以下JavaScriptで装飾する必要があります */
 js-page-top
 
-/* footer */
-.footer{
-
+/*---------
+ footer 
+ ----------*/
+.footer {
+  padding: 30px;
+  background-color: #333;
 }
-.copyright{
-  
+
+.copyright {
+  font-size: 10px;
+  text-align: center;
+  color: #797979;
 }

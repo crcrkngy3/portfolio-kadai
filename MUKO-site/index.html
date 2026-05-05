@@ -1,90 +1,177 @@
 <!DOCTYPE html>
-<html lang="ja">
-  <head>
-  <title>MUKO</title>
-  <meta charset="UTF-8">
-  <meta name="description" content="ファッションブランドサイトMUKOのサイトです">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-    <!-- フォント指定 -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700&display=swap" rel="stylesheet">
+<html>
+<head>
+  <title>muko Details</title>
+  <meta charset="utf-8">
+  <meta name="description" content="mukoの作成に関しての説明文です">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="../css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="../css/cussion-style.css" >
 </head>
-
- <body>
-  <header class="page-header">
-      <div class="header-container">
-      <h1 class="logo-area">
-       <a href="index.html"><img class="logo-intro" src="img/logo.png" alt="MUKOロゴ"></a>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="header-top">
+      <h1 class="header-logo">
+        <a href="../index.html">TOZUKA MANAMI</a>
       </h1>
-      <nav>
-          <ul class="main-nav font-english">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">COLLECTION</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">SHOP</a></li>
-            <li><a href="#">CONTACT</a></li>
-          </ul>
-        </nav>
+      <nav class="gnav">
+        <ul class="gnav-list">
+          <li class="gnav-item"><a href="../index.html#works">WORKS</a></li>
+          <li class="gnav-item"><a href="../index.html#skill">SKILL</a></li>
+          <li class="gnav-item"><a href="../index.html#about">ABOUT</a></li>
+          <li class="gnav-item"><a href="../index.html#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <nav class="page-nav">
+      <ul class="page-nav-list">
+        <li><a href="#PREVIEW">PREVIEW</a></li>
+        <li><a href="#SKILL">SKILL</a></li>
+        <li><a href="#PERSONA">PERSONA</a></li>
+        <li><a href="#POINT">POINT</a></li>
+        <li><a href="#CONCEPT">CONCEPT</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+  <!-- main -->
+    <main class="content" id="PREVIEW">
+
+      <!-- mv -->
+      <div class="mv">
+        <div class="mv-container">
+          <img src="../img/works/MUKO.png" alt="MUKOイメージ画像"> 
         </div>
-  </header>
-  <main>
-      <section class="section">
-       <img src="img/main.png" alt="メインビジュアル" class="main-visual">
-      </section>
-  </main>
-  <article class="collection-container">
-    <div class="collection-item">
-     <a href="#"><img src="img/COLLECTION1.png" alt="collection1" class="collection-img"></a>
+      </div>
+
+      <!-- サイトに移動するボタン -->
+<div class="view-site-container">
+  <a href="site/index.html" target="_blank" class="btn-view-site">
+    View Website →</span>
+  </a>
+</div>
+
+
+ <!-- Technical Point / 技術的なこだわり -->
+  <!-- 以下HOMEと同じ仕様にするもしかしたら閉じタグ足りないかも -->
+<section class="skill section" id="SKILL">
+  <div class="container">
+        <h2 class="title">SKILL</h2>
+
+  <div class="tech-container">
+    <div class="tech-card">
+    <div class="tech-num">01</div>
+      <h3>Design / Figma(Prototyping)</h3>
+      <p>Figmaを用い、ブランドの世界観を体現するUIデザインを行いました。</p>
     </div>
-     <div class="collection-item">
-     <a href="#"><img src="img/COLLECTION2.png" alt="collection2" class="collection-img"></a>
+
+    <div class="tech-card">
+      <div class="tech-num">02</div>
+      <h3>Management / GitHub</h3>
+      <p>GitHubを用いたバージョン管理を行い、制作のプロセスを可視化しています。<br>
+        コードの変更履歴を適切に残すことで、制作の確実性を高めるだけでなく、チーム開発や将来的なメンテナンスを見据えた、清潔で透明性の高い管理を習慣化しています。</p>
     </div>
-   <div class="collection-item">
-     <a href="#"><img src="img/COLLECTION3.png" alt="collection3" class="collection-img"></a>
+
+     <div class="tech-card">
+     <div class="tech-num">03</div>
+      <h3>Coding / VS Code</h3>
+      <p>VS Codeを用い、HTML/CSSでのコーディングを行いました。<br>
+         誰にとっても読みやすく、誠実なコードを書くことを意識しています。</p>
     </div>
-  </article>
-  <div class="MUKO-p">
-    <p>MUKO does not exist.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- PERSONA-->
+<section class="concept section" id="PERSONA">
+  <div class="container">
+        <h2 class="title">PERSONA</h2>
+
+<div class="works-detail">
+  <div class="detail-row">
+    <div class="detail-icon">
+      <img src="../img/cushion/来訪者.png" alt="来訪者のアイコン"></div>
+       
+         <div class="detail-text">
+         <h3>独自の哲学を持ち、本質的な質感を求める表現者様</h3>
+         <p>「流行に流されない、ブランドの本質を知りたい」「ブランドの哲学や空気を身にまといたい」</div>
+     
   </div>
 
+  <div class="detail-row reverse">
+    <div class="detail-icon">
+      <img src="../img/cushion/制作者.png" alt="制作者のアイコン"></div>
+           <div class="detail-text">
+           <h3>ブランドのイメージを大切にしたいブランド様</h3>
+           <p>「『MUKO』は、売るためのブランドではなく、問いかけるためのブランドでありたい。
+        衣服を「思考の依り代」と定義する私たちは完璧な実体を見せるのではなく、あえて『寄り』や『余白』をみせることで、見る人の想像力がブランドを完成させる。
+このサイトを通じて、デジタル空間に『静寂』と『存在感』を構築してほしいと依頼しました。」</p>
+           </div>
+   </div>
+   </div>
+   </div>
+</section>
+
+<!-- 要約の矢印マークを入れる -->
+ 
+<!-- こだわり詳細 -->
+ <section class="works section" id="POINT">
+    <div class="container">
+      <h2 class="title">POINT</h2>
+         <div class="consept-text">
+            <p>情報を網羅的に伝える一般的なWebサイトの設計とは異なり、<br>
+情報の「不在」や「余白」をコントロールすることで、ブランドの持つ神秘性と独自の美学を際立たせる設計を試みました。</p>
+    </p>
+         </div>
+    </div>
+</section>
 
 
-  <footer class="page-footer">
-      <a href="index.html"><img class="logo" src="img/logo.png" alt="MUKOロゴ"></a>
-        
-        <nav class="footer-nav">
-          <div class="footer-group">
-            <h3>クライアントサービス</h3>
-             <ul class="footer-links font-english">
-              <li><a href="#">お問い合わせ</a></li>
-              <li><a href="#">返品・交換フォーム</a></li>
-              <li><a href="#">配送について</a></li>
-              <li><a href="#">お電話でのお問い合わせ</a></li>
-             </ul>
-          </div>
-          <div class="footer-group">
-            <h3>MUKOについて</h3>
-             <ul class="footer-links font-english">
-              <li><a href="#">ご利用規約</a></li>
-              <li><a href="#">プライバシー</a></li>
-              <li><a href="#">クッキー</a></li>
-              <li><a href="#">特定商法取引に基づく表記</a></li>
-             </ul>
-          </div>
-        </nav>
 
-      <div class="SNS">
-       <div><a href="https://  "><img src="img/X.png" alt="Xへリンク" ></a></div>
-       <div><a href="https://  "><img src="img/instagram.png" alt="instagramへリンク" ></a></div>
-       <div><a href="https://  "><img src="img/Facebook.png" alt="facebookへリンク" ></a></div>
+<!-- キャッチコピー（一言で伝える） -->
+ <section class="bridge-section" id="CONCEPT">
+        <div class="container">
+          <h2 class="title">CONCEPT</h2>
+    <h3 class="summary-phrase">「纏う哲学を空間で共有する」</h3>
+    <p class="summary-description">
+        ブランドが大切にする「纏う哲学」という定義が<br>
+      来訪者と深く共有される。<br>
+      その静かな対話が生まれる空間をWeb上の余白や質感で表現しました。<br>
+    
+    </p>
+  </div>
+</section>
+
+
+<!-- サイトに移動するボタン -->
+<div class="view-site-container">
+  <a href="site/index.html"  target="_blank" class="btn-view-site">
+    View Website <span class="arrow">→</span>
+  </a>
+</div>
+
+
+     <!-- TOPへ戻るボタン -->
+      <div class="page-top" id="js-page-top">
+        <span class="material-icons-outlined">expand_less</span>
       </div>
-
-      <div class="copyright">
-        <small>&copy; 2026 MUKO,Inc. All Rights Reserved.</small>
-      </div>
+ 
+    <!-- footer -->
+    <footer class="footer">
+      <div class="copyright">&copy;TOZUKA MANAMI</div>
     </footer>
+    <!-- /footer -->
 
+  </div>
+  <!-- 以下jQueryと自分で書くjavascriptを読み込むためのコードです -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type='text/javascript' src="../js/script.js"></script>
 </body>
 </html>

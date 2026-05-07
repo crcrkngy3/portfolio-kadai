@@ -491,6 +491,54 @@ js-page-top
   .gnav-item a:after {
     display: none;
   }
+
+  .gnav-list {
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 10px 20px; 
+  }
+
+  .gnav-list li {
+    font-size: 12px; 
+  }
+
+.page-nav-list {
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 10px 20px; 
+  }
+  
+  .page-nav-list li {
+    font-size: 12px; 
+  }
+
+  /* tech */
+
+  .tech-container {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+.tech-card {
+    width: 100%; 
+    max-width: 100%;
+  
+
+/* PERSONA */
+.detail-row, .detail-row.reverse {
+    flex-direction: column; 
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+  .detail-icon {
+    width: 150px; 
+    margin: 0 auto;
+  }
+  .detail-text {
+    text-align: center;
+  }
+
+
   /* POINT */
   .consept-text{
     font-size: 15px;

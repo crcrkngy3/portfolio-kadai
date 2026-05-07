@@ -97,6 +97,7 @@ ul {
 }
 
 
+
 /*----------
  header 
  -----------*/
@@ -104,7 +105,7 @@ ul {
 .header{
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 9999;
   width: 100%;
   background-color: #fff;
 }
@@ -116,68 +117,12 @@ ul {
   gap: 10px; 
 }
 
-.gnav-list {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
-}
-.gnav-list a {
-  text-decoration: none;
-  color: #333;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-/* cushionページのページ内リンクのメニュー */
-.page-nav-list {
-  display: flex; 
-  list-style: none;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
-}
-
-.page-nav-list a {
-  position: relative;
-  font-size: 13px;
-  font-weight: bold;
-  display: inline-block;
-  padding: 5px 0;
-  transition: .3s;
-  letter-spacing: .05em;
-}
-
-
-.page-nav-list a:after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 3px;
-  content: "";
-  transition: .3s;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  background-color: #000000;
-}
-
-.page-nav-list a:hover:after {
-  width: 100%;
-}
-
-
-
 .header .container{
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 40px;
-  max-width: 1200px; 
-  margin: 0 auto;
 }
-
 
 .header-logo{
   font-size: 20px;
@@ -186,21 +131,15 @@ ul {
   margin-right: 20px;
   letter-spacing: .05em;
 }
+
 /* ロゴだけ色少し変える */
 .header-logo a{
   color: #585252;
 }
 .header-logo a:hover {
+  transition: .3s;
   color: #9B6E56;
 }
-
-
-
-/* --- cushionページ用の追加設定 --- */
-
-
-
-
 
 /*----------
 ナビゲーションメニュー
@@ -242,6 +181,45 @@ ul {
 
 .gnav-item a:hover:after {
   width: 100%;
+}
+
+
+/*cushionページに表示されるタイトルとメニュー*/
+
+.cushionmenu{
+ padding: 20px 0;
+  text-align: center; 
+ 
+
+}
+
+.site-name{
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.page-nav{
+ background-color: #b4b4b4; 
+  margin-top: 20px;
+}
+.page-nav-list{
+display: flex;
+  justify-content: center; 
+  list-style: none;
+  gap: 30px; 
+  padding: 0;
+  margin: 0;
+}
+
+.page-nav-list a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.page-nav-list a:hover {
+  transition: .3s;
+  color: #ffffff;
 }
 
   /*----------

@@ -9,12 +9,12 @@ body{
   font-weight: 400;
   font-size: 16px;
   letter-spacing: .05em;
-  color: #000000;
+  color:#1a1a1a;
 }
 
 a{
   text-decoration: none;
-  color: #000000
+  color: #1a1a1a;
 }
 a:hover{
   color: #9B6E56;
@@ -135,7 +135,7 @@ ul {
 
 /* ロゴだけ色少し変える */
 .header-logo a{
-  color: #585252;
+  color: #1a1a1a;
 }
 .header-logo a:hover {
   transition: .3s;
@@ -177,20 +177,22 @@ ul {
   transition: .3s;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  background-color: #000000;
+  background-color: #1a1a1a;
 }
 
 .gnav-item a:hover:after {
   width: 100%;
 }
 
+.gnav-item:not(:last-child) {
+  margin-right: 20px;
+}
 
 /*cushionページに表示されるタイトルとメニュー*/
 
 .cushionmenu{
  padding: 20px 0;
   text-align: center; 
- 
 
 }
 
@@ -199,11 +201,13 @@ ul {
   margin-bottom: 15px;
 }
 .page-nav{
+ padding: 10px;
  background-color: #b4b4b4; 
-  margin-top: 20px;
+ margin-top: 20px;
 }
+
 .page-nav-list{
-display: flex;
+ display: flex;
   justify-content: center; 
   list-style: none;
   gap: 30px; 
@@ -221,6 +225,10 @@ display: flex;
 .page-nav-list a:hover {
   transition: .3s;
   color: #ffffff;
+}
+
+.page-nav:not(:last-child) {
+  margin-right: 20px;
 }
 
   /*----------
@@ -262,6 +270,7 @@ padding: 0 20px;
     position: relative;
   background: transparent;
   z-index: 1;
+  transition: 0.3s; 
 }
 .btn-view-site:hover {
   color: #fff;
@@ -294,6 +303,12 @@ padding: 0 20px;
   text-align: left;
   box-shadow: 0 4px 10px rgba(0,0,0,0.03); /* 控えめな影 */
   transition: transform 0.3s ease;
+  transition: 0.3s; 
+}
+
+.tech-card:hover{
+  transform: translateY(-5px); 
+  
 }
 .tech-num{
   font-size: 0.9rem;
@@ -311,7 +326,7 @@ padding: 0 20px;
 .tech-card p {
   font-size: 0.9rem;
   line-height: 1.6;
-  color: #000000;
+  color: #1a1a1a;
 }
 
 /*CONCEPT */
@@ -352,7 +367,7 @@ padding: 0 20px;
 }
 .detail-text p {
   line-height: 1.8;
-  color: #000000;
+  color: #1a1a1a;
 }
 
 
@@ -361,7 +376,7 @@ padding: 0 20px;
   text-align: center;
  font-size: 16px;
  line-height: 2.0;
-  color: #000000;
+  color:#1a1a1a;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -383,7 +398,7 @@ padding: 0 20px;
 .summary-description{
 text-align: center;
   font-size: 16px;
-  color: #000000;
+  color: #1a1a1a;
   margin-bottom: 30px;
   line-height: 1.5;
 }
@@ -396,6 +411,7 @@ padding: 10px;
 cursor: pointer;
 text-align: center;
 background-color: #b4b4b4;
+transition: 0.3s; 
 }
 
 
@@ -404,9 +420,12 @@ background-color: #b4b4b4;
   color: #fff;
 }
 
-#js-page-top{
-
+.page-top:hover .material-icons-outlined {
+  color: #9B6E56; 
+  transform: translateY(-5px); 
 }
+
+
 
 
 
@@ -418,7 +437,7 @@ js-page-top
  ----------*/
 .footer {
   padding: 30px;
-  background-color: #333;
+  background-color: #ffffff;
 }
 
 .copyright {

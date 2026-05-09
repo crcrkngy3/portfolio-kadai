@@ -13,7 +13,7 @@ body{
 
 a{
   text-decoration: none;
-  color: #1a1a1a
+  color: #1a1a1a;
 }
 a:hover{
   color: #9B6E56;
@@ -70,13 +70,14 @@ ul {
  -----------*/
 
 .title {
-  font-size: 22px;
+  font-size: 35px;
   font-weight: 1000;
   line-height: 1;
-  margin-bottom: 40px;
+  padding: 80px 40px;
+  margin-bottom:  120px; 
   text-align: center;
   letter-spacing: .05em;
-  color: #585252;
+  color:  #1a1a1a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,8 +106,10 @@ ul {
 .lead {
   font-size: 16px;
   line-height: 1.8;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
+
+
 
 
 /*----------
@@ -118,7 +121,7 @@ ul {
   top: 0;
   z-index: 1;
   width: 100%;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .header-top {
@@ -145,7 +148,7 @@ ul {
 
 /* ロゴだけ色少し変える */
 .header-logo a{
-  color: #585252;
+  color: #1a1a1a;
 }
 .header-logo a:hover {
   transition: .3s;
@@ -187,7 +190,7 @@ ul {
   transition: .3s;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  background-color: #1a1a1a
+  background-color: #1a1a1a;
 }
 
 .gnav-item a:hover:after {
@@ -342,7 +345,7 @@ padding: 0 20px;
 /*----------
  ABOUT 
  -----------*/
-.about section{
+.about-section{
 
 }
 
@@ -351,6 +354,7 @@ padding: 0 20px;
   flex-wrap: wrap;
   max-width: 800px;
   margin: 0 auto;
+  align-items: center; 
 }
 .profile-img{
   width: 20%;
@@ -374,24 +378,24 @@ padding: 0 20px;
  ---------*/
 
 .contact {
-  padding: 60px 0;
+  text-align: center;
+}
+
+.contact-list {
   text-align: center;
 }
 
 .lead{
   font-size: 16px;
+  text-align: center;
 }
+
 .contact-list img{
   width: 50px;         
   margin-top: 20px;
+  padding-bottom: 100px;
 
 }
-
-/* mailへの問い合わせ文章をスマホ表示の時に二行に改行する設定 */
-.sp-only{
-
-}
-
 
 /* TOPへ戻るボタン*/
 .page-top{
@@ -400,6 +404,7 @@ padding: 10px;
 cursor: pointer;
 text-align: center;
 background-color: #b4b4b4;
+transition: 0.3s; 
 }
 
 
@@ -409,9 +414,10 @@ background-color: #b4b4b4;
 }
 
 
-/* 以下JavaScriptで装飾する必要があります */
-js-page-top
-
+.page-top:hover .material-icons-outlined {
+  color: #9B6E56; 
+  transform: translateY(-5px); 
+}
 
 
 /*----------
@@ -419,7 +425,7 @@ js-page-top
  -----------*/
 .footer {
   padding: 30px;
-  background-color: #333;
+  background-color: #ffffff;
 }
 
 .copyright {
@@ -448,8 +454,10 @@ js-page-top
 
   /* 見出し */
   .title {
+     padding: 50px 20px;  
+    margin-bottom: 60px;
     font-size: 26px;
-    margin-bottom: 20px;
+  
   }
 
   .lead {

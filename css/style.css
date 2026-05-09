@@ -1,11 +1,11 @@
-@charset "UTF-8"
-
-
+@charset "UTF-8";
 /* ----------
 共通部分 
 -------------*/
 body{
-  font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  font-family: "Poppins", "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 16px;
   letter-spacing: .05em;
   color: #000000;

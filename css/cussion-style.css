@@ -1,11 +1,12 @@
-@charset "UTF-8"
+@charset "UTF-8";
 
 
 /* ----------
 共通部分 
 -------------*/
 body{
-  font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  font-family: "Poppins", "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   letter-spacing: .05em;
   color: #000000;
@@ -255,7 +256,6 @@ padding: 0 20px;
      border: 1.5px solid #a67c52;
      color: #9B6E56;
      text-decoration: none;
-     font-family: "serif";
      font-size: 1.2rem; 
      font-weight: 500;
      letter-spacing: 0.15em;
@@ -296,7 +296,6 @@ padding: 0 20px;
   transition: transform 0.3s ease;
 }
 .tech-num{
-   font-family: "serif";
   font-size: 0.9rem;
   color: #a67c52;
   border-bottom: 1px solid #a67c52;
@@ -347,7 +346,6 @@ padding: 0 20px;
 }
 
 .detail-text h3 {
-  font-family: "serif";
   color: #9B6E56;
   font-size: 1.5rem;
   margin-bottom: 15px;
@@ -377,14 +375,12 @@ padding: 0 20px;
 
 
 .summary-phrase{
- font-family: "serif";
   font-size: 20px;
   color: #a67c52;
   margin-bottom: 30px;
   line-height: 1.5;
 }
 .summary-description{
-font-family: "serif";
 text-align: center;
   font-size: 16px;
   color: #000000;

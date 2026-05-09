@@ -42,7 +42,6 @@ img{
  ----------- */
 
 .wrapper{
-   /* headerのサイズに合わせてメインの始まりの場所を調整する、今は73pxにしている !!現時点でかぶってるかも修正必要!! */
   padding-top: 73px;
 }
 
@@ -236,7 +235,7 @@ ul {
    -----------*/
 
 .mv{
-  margin-top: 100px;
+  margin-top: 200px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -429,9 +428,6 @@ transition: 0.3s;
 
 
 
-/* 以下JavaScriptで装飾する必要があります */
-js-page-top
-
 /*---------
  footer 
  ----------*/
@@ -525,6 +521,16 @@ js-page-top
   
   .page-nav-list li {
     font-size: 12px; 
+  }
+
+  /* main */
+  .mv {
+    height: 40vh;
+    margin-top: 170px;  
+  }
+  
+  .mv-container {
+    padding: 0 20px;
   }
 
   /* tech */

@@ -26,6 +26,13 @@ img {
 }
 
 /* header */
+
+.special-text{
+  font-size: 50px;
+  color: #7E9A8E;
+ font-family: "big-caslon-fb", serif;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between; /* ロゴを左、メニューを右に飛ばす */

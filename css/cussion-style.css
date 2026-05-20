@@ -403,6 +403,29 @@ text-align: center;
 }
 
 
+
+/* OTHER */
+
+.other-section {
+    padding: 120px 20px;
+     position: relative;
+}
+
+
+#OTHER .other-list {
+  padding: 60px 0;
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.banner, .poster, .meishi {
+    flex: 1;               
+    min-width: 280px;     
+    max-width: 330px;     
+}
+
 /* TOPへ戻るボタン*/
 .page-top{
 font-weight: bold;

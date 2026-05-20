@@ -376,8 +376,11 @@ padding: 0 20px;
 /*--------
  CONTACT 
  ---------*/
-
+.contact-section {
+  display: none;
+}
 .contact {
+  display: none;
   text-align: center;
 }
 

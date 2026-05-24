@@ -1,3 +1,41 @@
+@charset "UTF-8";
+/* ----------
+共通部分 
+-------------*/
+body{
+  font-family: "Poppins", "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: .05em;
+  color: #1a1a1a;
+}
+
+a{
+  text-decoration: none;
+  color: #1a1a1a;
+}
+a:hover{
+  color: #9B6E56;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  border-style: none;
+}
+
+.pc-only {
+  display: block;
+}
+
+.sp-only {
+  display: none;
+}
+
+
+
 
 /* 画面全体のレイアウト */
 .hero-section {
@@ -59,4 +97,37 @@
   font-size: 1rem;
   line-height: 1.6;
   color: #424040;
+}
+
+/* サイトに移動するボタン */
+.view-site-container {
+  margin: 80px 0; 
+  text-align: center;
+}
+.btn-view-site{
+  display: inline-block;
+    padding: 20px 60px; 
+     border: 1.5px solid #a67c52;
+     color: #9B6E56;
+     text-decoration: none;
+     font-size: 1.2rem; 
+     font-weight: 500;
+     letter-spacing: 0.15em;
+    position: relative;
+  background: transparent;
+  z-index: 1;
+  transition: 0.3s; 
+}
+.btn-view-site:hover {
+  color: #fff;
+  background-color: #9B6E56;
+
+}
+
+/* スマホ用のレスポンシブ対応を追加 */
+@media (max-width: 768px) {
+  .text-container {
+    flex-direction: column; /* スマホでは縦並びにする */
+    gap: 20px;              /* カードとカードの間の縦の隙間 */
+  }
 }

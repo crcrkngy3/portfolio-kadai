@@ -278,15 +278,7 @@ padding: 0 20px;
 }
 
 /* SKILL */
-.skill section{
 
-}
-
-#skill{
-
-}
-
-/* それぞれのテック */
 .tech-container{
   display: flex;
   justify-content: space-between;

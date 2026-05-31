@@ -562,17 +562,39 @@ transition: 0.3s;
 
 /* PERSONA */
 .detail-row, .detail-row.reverse {
-    flex-direction: column; 
-    gap: 20px;
-    margin-bottom: 50px;
-  }
-  .detail-icon {
-    width: 150px; 
-    margin: 0 auto;
-  }
-  .detail-text {
-    text-align: center;
-  }
+  display: flex;          /* flexを明示 */
+  flex-direction: column; 
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+/* 1. テキストの箱（detail-text）自体もFlexにして縦並びに命令する */
+.detail-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* 中身のh3やpを中央寄せに */
+  text-align: center;
+}
+
+/* 2. 【最重要】orderプロパティで上から「h3 → 画像 → p」の順に強制配置 */
+.detail-text h3 {
+  order: 1;               /* 1番目：タイトル */
+  margin-bottom: 10px;    /* 下にくる画像との隙間を少しあける */
+}
+
+.detail-icon {
+  order: 2;               /* 2番目：画像 */
+  width: 150px;           /* 現在設定されているサイズをキープ */
+  margin: 0 auto;
+}
+
+.detail-text p {
+  order: 3;               /* 3番目：本文 */
+  text-align: left;       /* カッコ内の長文は、左詰めのほうが圧倒的に読みやすくなります */
+  display: inline-block;  /* 左詰めにしつつ、全体を中央に寄せるプロの技 */
+  margin-top: 10px;       /* 画像との隙間 */
+}
+
 
 
   /* POINT */
@@ -594,6 +616,22 @@ transition: 0.3s;
 
   .mv-container {
     padding: 0 20px;
+  }
+
+
+/* サイト移動ボタン */
+  .view-site-container {
+    margin: 40px 0; 
+  }
+
+  .btn-view-site {
+    display: block;        
+    max-width: 280px;     
+    margin: 0 auto; 
+    padding: 16px 0;      
+    font-size: 1rem;   
+    letter-spacing: 0.1em;
+    text-align: center;   
   }
 
  

@@ -71,6 +71,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 40px; 
   padding: 20px 40px;
 }
 
@@ -200,6 +201,23 @@ ul {
   color: #333333;
 }
 
+
+
+/* footer */
+.footer {
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+.copyright {
+  font-size: 10px;
+  text-align: center;
+  color: #797979;
+}
+
+
+
+
 /* アニメーション定義 */
 @keyframes loop-scroll {
   from {
@@ -227,6 +245,7 @@ ul {
   .header .container {
     padding-left: 10px;  /* 左側の隙間を10pxに縮める */
     padding-right: 10px; /* 右側の隙間も合わせる場合 */
+    gap: 30px;
   }
 
 .mv-text {
@@ -238,6 +257,10 @@ ul {
 .header-logo img {
   width: 50px;
   height: auto; 
+}
+
+.gallery-lead {
+  font-size: 8px;
 }
 
 .carousel-item {

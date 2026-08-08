@@ -1,0 +1,285 @@
+@charset "UTF-8";
+
+/* ----------
+共通部分 
+-------------*/
+body {
+  font-family: "Poppins", "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: .05em;
+  color: #333333;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* PC・スマホ表示切り替え */
+.pc-only {
+  display: block;
+}
+.sp-only {
+  display: none; /* PCではスマホ用を隠す */
+}
+
+/*----------
+ サイト全体に効かせる設定
+ ----------- */
+.section {
+  padding: 90px 0;
+}
+
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+ul {
+  list-style: none;
+}
+
+/*----------
+ header 
+ -----------*/
+.header {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.header-top {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  gap: 10px; 
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px; 
+  padding: 20px 40px;
+}
+
+.header-logo {
+  display: block;
+}
+
+.header-logo img {
+  width: 100px; 
+  height: auto; 
+}
+
+/*----------
+ナビゲーションメニュー
+------------*/
+.gnav-list {
+  display: flex;
+  gap: 20px;
+}
+
+.gnav-item a {
+  position: relative;
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 0;
+  transition: .3s;
+  letter-spacing: .05em;
+}
+
+/* カーソル合わせた時に下に下線が出る仕様にする */
+.gnav-item a:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  content: "";
+  transition: .3s;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #333333;
+}
+
+.gnav-item a:hover:after {
+  width: 100%;
+}
+
+/*----------
+ アーティスト詳細ページ
+ ----------- */
+.artist-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+}
+
+/* 左側：テキストエリア */
+.artist-text-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.artist-sub-title {
+  display: block;
+  font-size: 13px;
+  color: #797979;
+  margin-bottom: 8px;
+}
+
+.artist-name {
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  margin-bottom: 40px;
+  color: #1a1a1a;
+}
+
+.artist-bio p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #444444;
+  margin-bottom: 28px;
+}
+
+/* 右側：画像エリア */
+.artist-img-col {
+  width: 40%;
+  max-width: 460px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 40px; /* スクロールしても追従して綺麗に見える位置固定 */
+}
+
+.artist-img-col img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px; /* 画像の角丸 */
+  object-fit: cover;
+}
+
+/*---------------------------------
+ Backボタン (footerの上)
+---------------------------------*/
+.back-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 180px;
+  padding: 12px 0;
+  background-color: #f8f8f8;
+  color: #333333;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.back-arrow {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.back-btn:hover {
+  background-color: #dcdcdc;
+  color: #ffffff;
+}
+
+/*----------
+footer
+------------*/
+.footer {
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+.copyright {
+  font-size: 10px;
+  text-align: center;
+  color: #797979;
+}
+
+/*----------
+ レスポンシブ（スマホ表示：768px以下）
+ ----------- */
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 50px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .header .container {
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 30px;
+  }
+  
+  .artist-inner {
+    flex-direction: column; /* 縦並びにして本文の下に画像を配置 */
+  }
+
+  .artist-text-col {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .artist-name {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .artist-bio p {
+    font-size: 8px;
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+
+  .artist-img-col {
+    width: 100%; /* スマホ時は横幅いっぱいに拡大 */
+    position: static;
+  }
+
+  /* backボタン */
+  .back-btn-container {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  .back-btn {
+    width: 150px;
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  .pc-only {
+    display: none;
+  }
+
+  .sp-only {
+    display: block;
+  }
+}

@@ -1,21 +1,22 @@
 @charset "UTF-8";
+
 /* ----------
 共通部分 
 -------------*/
-body{
+body {
   font-family: "Poppins", "Zen Maru Gothic", sans-serif;
-  font-weight: 400 ;
+  font-weight: 400;
   font-size: 16px;
   letter-spacing: .05em;
   color: #333333;
 }
 
-a{
+a {
   text-decoration: none;
   color: #333333;
 }
 
-img{
+img {
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
@@ -29,12 +30,9 @@ img{
   display: none; /* PCではスマホ用を隠す */
 }
 
-
-
 /*----------
  サイト全体に効かせる設定
  ----------- */
-
 .section {
   padding: 90px 0;
 }
@@ -49,13 +47,10 @@ ul {
   list-style: none;
 }
 
-
-
 /*----------
  header 
  -----------*/
-
-.header{
+.header {
   width: 100%;
   background-color: #ffffff;
 }
@@ -67,7 +62,7 @@ ul {
   gap: 10px; 
 }
 
-.header .container{
+.header .container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -84,12 +79,10 @@ ul {
   height: auto; 
 }
 
-
 /*----------
 ナビゲーションメニュー
 ------------*/
-
-.gnav-list{
+.gnav-list {
   display: flex;
   gap: 20px;
 }
@@ -103,7 +96,8 @@ ul {
   transition: .3s;
   letter-spacing: .05em;
 }
-/* カーソール合わせた時に下に下線が出る仕様にする */
+
+/* カーソル合わせた時に下に下線が出る仕様にする */
 .gnav-item a:after {
   position: absolute;
   bottom: 0;
@@ -121,11 +115,18 @@ ul {
   width: 100%;
 }
 
-/* メインビジュアル */
+/*----------
+メインビジュアル (MV)
+------------*/
+.mv {
+  width: 100%;
+  overflow: hidden;
+}
 
 .mv-container {
   position: relative; 
   width: 100%;
+  text-align: center;
 }
 
 .mv-container img {
@@ -134,11 +135,15 @@ ul {
   vertical-align: bottom; 
 }
 
-.mv-text {
+.mv-text-wrap {
   position: absolute; 
   top: 18%;           
   left: 50%;          
   transform: translate(-50%, -50%); 
+  pointer-events: none; /* クリック等の邪魔にならないように */
+}
+
+.mv-text {
   font-size: 24px;
   color: #a5a1a1;    
   text-align: center;
@@ -146,9 +151,38 @@ ul {
   margin: 0;
 }
 
+/*----------
+ブラー（ピント合わせ風）フェードイン
+------------*/
+/* 画像やテキストに付与するクラス */
+.blur-in {
+  animation: focusIn 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  opacity: 0;
+  filter: blur(12px); /* 初期状態はしっかりぼかしておく */
+}
 
-/* ギャラリー＆カルーセル */
+/* 文字などを遅らせて出したい場合用 */
+.blur-in.delay {
+  animation-delay: 0.8s; /* 1.0秒遅れてスタート */
+}
 
+/* @keyframesの定義 */
+@keyframes focusIn {
+  0% {
+    opacity: 0;
+    filter: blur(12px);              /* ぼやけた状態 */
+    transform: scale(1.03);          /* ほんの少し手前に引き寄せる（レンズの感触） */
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);               /* ピントがバチッと合う */
+    transform: scale(1);             /* 正しいサイズへ */
+  }
+}
+
+/*----------
+ギャラリー＆カルーセル
+------------*/
 .gallery-lead {
   text-align: center;
   font-size: 15px;
@@ -163,9 +197,11 @@ ul {
 
 .carousel-wrapper {
   display: flex; 
-  width: 100%;
+  width: max-content; /* 中身のリスト4つ分をすべて横一列に並べる */
   overflow: hidden; 
   user-select: none;
+  /* ★ここで全体をまとめて動かします */
+  animation: loop-scroll 40s linear infinite;
 }
 
 .carousel-list {
@@ -173,7 +209,6 @@ ul {
   gap: 20px;
   padding-right: 20px; 
   flex-shrink: 0;
-  animation: loop-scroll 20s linear infinite;
 }
 
 /* 各カードのスタイル */
@@ -202,9 +237,19 @@ ul {
   color: #333333;
 }
 
+/* アニメーション定義（ループスクロール） */
+@keyframes loop-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 
-
-/* footer */
+/*----------
+footer
+------------*/
 .footer {
   padding: 30px;
   background-color: #ffffff;
@@ -216,87 +261,72 @@ ul {
   color: #797979;
 }
 
-
-
-
-/* アニメーション定義 */
-@keyframes loop-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-/* スマホ表示用（画面幅768px以下の場合） */
+/*----------
+レスポンシブ（スマホ表示：768px以下）
+------------*/
 @media screen and (max-width: 768px) {
-  /* 共通部分 */
-  /* セクションの上下余白を 90px → 50px（または60px）に縮小 */
   .section {
     padding: 50px 0;
   }
 
-  /* コンテナの左右パディングを 40px → 20px（または16px）に縮小 */
   .container {
     padding: 0 20px;
   }
 
-  /* ★追加：ヘッダーのコンテナだけ左右余白をさらに小さくする（例: 10px） */
   .header .container {
-    padding-left: 10px;  /* 左側の隙間を10pxに縮める */
-    padding-right: 10px; /* 右側の隙間も合わせる場合 */
+    padding-left: 10px;
+    padding-right: 10px;
     gap: 30px;
   }
 
-.mv-text {
-    font-size: 14px; /* スマホでは文字サイズを少し小さくする */
-    top: 18%;        /* スマホでの上下位置の微調整 */
+  .mv-text {
+    font-size: 14px;
+    top: 18%;
   }
 
-/* header */
-.header-logo img {
-  width: 50px;
-  height: auto; 
-}
+  .header-logo img {
+    width: 50px;
+    height: auto; 
+  }
 
-.gallery-lead {
-  font-size: 8px;
-  margin-top: 50px;
-  margin-bottom: 100px;
-}
+  .gallery-lead {
+    font-size: 12px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
 
-.carousel-item {
+  .carousel-item {
     width: 140px;
     flex-shrink: 0;
   }
+
   .carousel-img {
     width: 100%;
-    height: auto; /* ★高さの固定(290px)をやめて自動調整にする */
+    height: auto;
     border-radius: 12px;
-    overflow: hidden; /* 角丸を画像にもきれいに適用させる */
+    overflow: hidden;
   }
 
   .carousel-img img {
     width: 100%;
-    height: auto; /* ★画像自体の高さも自動調整 */
-    object-fit: contain; /* または指定なし（比率通りに収まります） */
+    height: auto;
+    object-fit: contain;
   }
+
   .carousel-title {
     font-size: 12px;
     margin-top: 6px;
   }
+
   .carousel-list {
-    gap: 12px; /* PC用より少し狭くする */
+    gap: 12px;
     padding-right: 12px;
   }
 
-  /* 既存の表示切り替え */
   .pc-only {
     display: none;
   }
   .sp-only {
     display: block;
   }
-
 }

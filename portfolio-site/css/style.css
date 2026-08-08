@@ -267,11 +267,28 @@ ul {
 }
 
 .carousel-item {
-    width: 210px;
+    width: 140px;
+    flex-shrink: 0;
   }
   .carousel-img {
-    height: 290px;
+    width: 100%;
+    height: auto; /* ★高さの固定(290px)をやめて自動調整にする */
     border-radius: 12px;
+    overflow: hidden; /* 角丸を画像にもきれいに適用させる */
+  }
+
+  .carousel-img img {
+    width: 100%;
+    height: auto; /* ★画像自体の高さも自動調整 */
+    object-fit: contain; /* または指定なし（比率通りに収まります） */
+  }
+  .carousel-title {
+    font-size: 12px;
+    margin-top: 6px;
+  }
+  .carousel-list {
+    gap: 12px; /* PC用より少し狭くする */
+    padding-right: 12px;
   }
 
   /* 既存の表示切り替え */

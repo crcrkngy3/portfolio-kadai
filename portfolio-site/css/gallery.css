@@ -1,21 +1,22 @@
 @charset "UTF-8";
+
 /* ----------
 共通部分 
 -------------*/
-body{
+body {
   font-family: "Poppins", "Zen Maru Gothic", sans-serif;
-  font-weight: 400 ;
+  font-weight: 400;
   font-size: 16px;
   letter-spacing: .05em;
   color: #333333;
 }
 
-a{
+a {
   text-decoration: none;
   color: #333333;
 }
 
-img{
+img {
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
@@ -25,16 +26,15 @@ img{
 .pc-only {
   display: block;
 }
+
 .sp-only {
   display: none; /* PCではスマホ用を隠す */
 }
 
 
-
 /*----------
  サイト全体に効かせる設定
  ----------- */
-
 .section {
   padding: 90px 0;
 }
@@ -50,12 +50,10 @@ ul {
 }
 
 
-
 /*----------
  header 
  -----------*/
-
-.header{
+.header {
   width: 100%;
   background-color: #ffffff;
 }
@@ -67,7 +65,7 @@ ul {
   gap: 10px; 
 }
 
-.header .container{
+.header .container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -88,8 +86,7 @@ ul {
 /*----------
 ナビゲーションメニュー
 ------------*/
-
-.gnav-list{
+.gnav-list {
   display: flex;
   gap: 20px;
 }
@@ -103,7 +100,8 @@ ul {
   transition: .3s;
   letter-spacing: .05em;
 }
-/* カーソール合わせた時に下に下線が出る仕様にする */
+
+/* カーソル合わせた時に下に下線が出る仕様にする */
 .gnav-item a:after {
   position: absolute;
   bottom: 0;
@@ -121,42 +119,60 @@ ul {
   width: 100%;
 }
 
-/* ギャラリー一覧（縦並びの余白） */
+
+/*----------
+ ギャラリー一覧（PC表示）
+-----------*/
 .gallery-section .container {
   display: flex;
   flex-direction: column;
-  gap: 100px; /* ブロック同士の上下間隔 */
-  
-  /* ★中央配置のための指定 */
-  max-width: 1000px; /* 全体の最大幅（デザインに合わせて調整可能） */
-  margin-left: auto;  /* 左右autoで中央寄せ */
+  gap: 100px; 
+  max-width: 1000px;
+  margin-left: auto;
   margin-right: auto;
-  padding-left: 40px;  /* 画面端との最低限の余白 */
+  padding-left: 40px;
   padding-right: 40px;
 }
+
 /* 1ブロック（画像とテキストの横並び） */
 .gallery-container {
   display: flex;
   align-items: center; /* 縦中央揃え */
-  gap: 60px;          /* 画像とテキストの間の距離 */
+  gap: 60px;           /* 画像とテキストの間の距離 */
+}
+
+/* ★修正点：画像リンクとテキストリンク領域の調整 */
+.gallery-img-link {
+  display: block;
+  flex-shrink: 0; /* 画像枠の縮小防止 */
+  text-decoration: none;
+  color: inherit;
+}
+
+.gallery-text-link {
+  display: block;
+  flex: 1; /* ★ここが重要！テキストエリアを右側にいっぱい広げて確実にタップ・ホバーできるようにする */
+  text-decoration: none;
+  color: inherit;
 }
 
 /* 左側：画像枠 */
 .gallery-img {
   width: 400px;
   height: 400px;
-  flex-shrink: 0;
+  overflow: hidden;
 }
 
 .gallery-img img {
   width: 100%;
   height: 100% !important;
   object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
 /* 右側：テキストエリア */
 .gallery-text-box {
-  flex: 1;
+  width: 100%;
 }
 
 .gallery-title {
@@ -164,6 +180,7 @@ ul {
   font-weight: bold;
   margin-bottom: 20px;
   color: #333333;
+  transition: opacity 0.3s ease;
 }
 
 .gallery-text {
@@ -172,6 +189,52 @@ ul {
   color: #333333;
 }
 
+/* 画像ホバー時の処理（1.05倍に拡大） */
+.gallery-img-link:hover .gallery-img img {
+  transform: scale(1.05);
+}
+
+/* テキストホバー時にタイトルだけ少し薄くする */
+.gallery-text-link:hover .gallery-title {
+  opacity: 0.7;
+}
+
+
+/*---------------------------------
+ Backボタン (footerの上)
+---------------------------------*/
+.back-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 180px;
+  padding: 12px 0;
+  background-color: #f8f8f8;
+  color: #333333;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.back-arrow {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.back-btn:hover {
+  background-color: #dcdcdc;
+  color: #ffffff;
+}
 
 /* footer */
 .footer {
@@ -186,68 +249,104 @@ ul {
 }
 
 
-
-/* スマホ対応（768px以下） */
-  /* 共通部分 */
+/*---------------------------------
+ スマホ対応（768px以下）
+---------------------------------*/
 @media screen and (max-width: 768px) {
 
-  /* セクションの上下余白を 90px → 50px（または60px）に縮小 */
   .section {
     padding: 50px 0;
   }
 
-  /* コンテナの左右パディングを 40px → 20px（または16px）に縮小 */
   .container {
     padding: 0 20px;
   }
 
-  /* ★追加：ヘッダーのコンテナだけ左右余白をさらに小さくする（例: 10px） */
   .header .container {
-    padding-left: 10px;  /* 左側の隙間を10pxに縮める */
-    padding-right: 10px; /* 右側の隙間も合わせる場合 */
+    padding-left: 10px;
+    padding-right: 10px;
     gap: 30px;
   }
   
-/* header */
-.header-logo img {
-  width: 50px;
-  height: auto; 
-}
+  .header-logo img {
+    width: 50px;
+    height: auto; 
+  }
 
-/* gallaery */
-.gallery-section .container {
+  /* gallery */
+  .gallery-section .container {
     width: 100%;
     max-width: 100%;
-    padding-left: 24px;  /* ★画面左端からの距離を全員統一（24px） */
+    padding-left: 24px;  
     padding-right: 24px;
     gap: 60px;
   }
- .gallery-container {
+
+  .gallery-container {
     width: 100%;
     flex-direction: column;
-    align-items: flex-start; /* 左揃え */
+    align-items: flex-start; 
     gap: 20px;
+    scroll-margin-top: 40vh; 
   }
-.gallery-img {
+
+  .gallery-img-link {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    transition: transform 0.1s ease, opacity 0.1s ease;
+  }
+
+  .gallery-img {
     width: 150px;
     height: 150px;
-    margin: 0 auto; /* 左右中央配置 */
+    margin: 0 auto; 
   }
-.gallery-text-box {
+
+  .gallery-text-link {
+    width: 100%;
+    display: block;
+    transition: transform 0.1s ease, opacity 0.1s ease;
+  }
+
+  .gallery-text-box {
     width: 100%;
     text-align: left;
   }
   
-.gallery-title {
+  .gallery-title {
     font-size: 16px;
     margin-bottom: 8px;
   }
 
- .gallery-text {
+  .gallery-text {
     font-size: 10px;
     line-height: 1.8;
   }
-    /* 既存の表示切り替え */
+
+  .gallery-img-link:active {
+    transform: scale(0.97);
+    opacity: 0.6;
+  }
+
+  .gallery-text-link:active {
+    transform: scale(0.97);
+    opacity: 0.6;
+  }
+
+  /* backボタン */
+  .back-btn-container {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  .back-btn {
+    width: 150px;
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  /* 表示切り替え */
   .pc-only {
     display: none;
   }

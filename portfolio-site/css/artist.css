@@ -9,6 +9,8 @@ body {
   font-size: 16px;
   letter-spacing: .05em;
   color: #333333;
+  overflow-x: hidden; /* 横スクロール防止 */
+  width: 100%;
 }
 
 a {
@@ -27,7 +29,7 @@ img {
   display: block;
 }
 .sp-only {
-  display: none; /* PCではスマホ用を隠す */
+  display: none;
 }
 
 /*----------
@@ -97,7 +99,6 @@ ul {
   letter-spacing: .05em;
 }
 
-/* カーソル合わせた時に下に下線が出る仕様にする */
 .gnav-item a:after {
   position: absolute;
   bottom: 0;
@@ -113,61 +114,6 @@ ul {
 
 .gnav-item a:hover:after {
   width: 100%;
-}
-
-/*----------
- アーティスト詳細ページ
- ----------- */
-.artist-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  width: 100%;
-}
-
-/* 左側：テキストエリア */
-.artist-text-col {
-  flex: 1;
-  min-width: 0;
-}
-
-.artist-sub-title {
-  display: block;
-  font-size: 13px;
-  color: #797979;
-  margin-bottom: 8px;
-}
-
-.artist-name {
-  font-size: 36px;
-  font-weight: bold;
-  letter-spacing: 0.05em;
-  margin-bottom: 40px;
-  color: #1a1a1a;
-}
-
-.artist-bio p {
-  font-size: 14px;
-  line-height: 1.9;
-  color: #444444;
-  margin-bottom: 28px;
-}
-
-/* 右側：画像エリア */
-.artist-img-col {
-  width: 40%;
-  max-width: 460px;
-  flex-shrink: 0;
-  position: sticky;
-  top: 40px; /* スクロールしても追従して綺麗に見える位置固定 */
-}
-
-.artist-img-col img {
-  width: 100%;
-  height: auto;
-  border-radius: 16px; /* 画像の角丸 */
-  object-fit: cover;
 }
 
 /*---------------------------------
@@ -221,6 +167,60 @@ footer
 }
 
 /*----------
+ アーティスト詳細ページ
+ ----------- */
+.artist-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* ★上下中央揃えに設定 */
+  gap: 40px;
+  width: 100%;
+}
+
+/* 左側：テキストエリア */
+.artist-text-col {
+  width: 48%; /* 全体の約半分 */
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.artist-sub-title {
+  display: block;
+  font-size: 13px;
+  color: #797979;
+  margin-bottom: 8px;
+}
+
+.artist-name {
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  margin-bottom: 40px;
+  color: #1a1a1a;
+}
+
+.artist-bio p {
+  font-size: 14px; /* 文字サイズは変えずにそのまま */
+  line-height: 1.9;
+  color: #444444;
+  margin-bottom: 28px;
+}
+
+/* 右側：画像エリア（大きめ表示） */
+.artist-img-col {
+  width: 48%;
+  flex-shrink: 0;
+  /* ★position: sticky を削除して、文章の高さの中央に配置 */
+}
+
+.artist-img-col img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+/*----------
  レスポンシブ（スマホ表示：768px以下）
  ----------- */
 @media screen and (max-width: 768px) {
@@ -237,33 +237,33 @@ footer
     padding-right: 10px;
     gap: 30px;
   }
+
   
+  .header-logo img {
+    width: 50px;
+    height: auto; 
+  }
+
   .artist-inner {
-    flex-direction: column; /* 縦並びにして本文の下に画像を配置 */
+    flex-direction: column; /* スマホは縦並び */
+    gap: 30px;
   }
 
   .artist-text-col {
     width: 100%;
-    max-width: 100%;
-  }
-
-  .artist-name {
-    font-size: 28px;
-    margin-bottom: 30px;
   }
 
   .artist-bio p {
-    font-size: 8px;
+    font-size: 13px;
     line-height: 1.8;
     margin-bottom: 24px;
   }
 
   .artist-img-col {
-    width: 100%; /* スマホ時は横幅いっぱいに拡大 */
+    width: 100%;
     position: static;
   }
 
-  /* backボタン */
   .back-btn-container {
     margin-top: 50px;
     margin-bottom: 40px;

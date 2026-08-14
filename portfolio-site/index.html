@@ -38,19 +38,17 @@
     <!-- /header -->
 
     <!-- main -->
-<main class="content">
-  <!-- mv -->
-  <div class="mv">
-    <div class="mv-container">
-      <img src="img/mv.webp" alt="メイン画像" class="blur-in">
-      <div class="mv-text-wrap">
-        <!-- ★ class="blur-in delay" に変更 -->
-        <p class="mv-text blur-in delay">To be, and not to be.</p>
+    <main class="content">
+      <!-- mv -->
+      <div class="mv">
+        <div class="mv-container">
+          <img src="img/mv.webp" alt="メイン画像" class="blur-in">
+          <div class="mv-text-wrap">
+            <p class="mv-text blur-in delay">To be, and not to be.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <!-- /mv -->
-
+      <!-- /mv -->
 
       <!-- gallery section -->
       <section class="gallery section">
@@ -59,50 +57,57 @@
           <p class="gallery-lead">散歩や旅をしながら気ままに写真を撮っています</p>
         </div>
 
- <!-- カルーセル（横スクロール）エリア -->
-<div style="overflow: hidden; width: 100%;"></div>
+        <!-- カルーセル（横スクロール）エリア -->
+        <section class="carousel-section blur-in delay">
+          <div class="carousel-wrapper">
+            
+            <!-- 1組目 -->
+            <ul class="carousel-list">
+              <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#artwork"><img src="img/photo01.webp" alt="作品1"></a></div><p class="carousel-title">Artwork</p></li>
+              <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#portrait"><img src="img/photo02.webp" alt="作品2"></a></div><p class="carousel-title">Portrait</p></li>
+              <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#ceremony-Event"><img src="img/photo03.webp" alt="作品3"></a></div><p class="carousel-title">Ceremony / Event</p></li>
+              <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#snap"><img src="img/photo04.webp" alt="作品4"></a></div><p class="carousel-title">Snap</p></li>
+            </ul>
 
-<div class="carousel-wrapper">
-  
-  <!-- 1組目 -->
-  <ul class="carousel-list">
-    <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#artwork"><img src="img/photo01.webp" alt="作品1"></a></div><p class="carousel-title">Artwork</p></li>
-    <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#portrait"><img src="img/photo02.webp" alt="作品2"></a></div><p class="carousel-title">Portrait</p></li>
-    <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#ceremony-Event"><img src="img/photo03.webp" alt="作品3"></a></div><p class="carousel-title">Ceremony / Event</p></li>
-    <li class="carousel-item"><div class="carousel-item"><div class="carousel-img"><a href="gallery.html#snap"><img src="img/photo04.webp" alt="作品4"></a></div><p class="carousel-title">Snap</p></li>
-  </ul>
+            <!-- 2組目 -->
+            <ul class="carousel-list" aria-hidden="true">
+              <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#artwork"><img src="img/photo01.webp" alt="作品1" decoding="async"></a></div><p class="carousel-title">Artwork</p></li>
+              <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#portrait"><img src="img/photo02.webp" alt="作品2" decoding="async"></a></div><p class="carousel-title">Portrait</p></li>
+              <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#ceremony-Event"><img src="img/photo03.webp" alt="作品3" decoding="async"></a></div><p class="carousel-title">Ceremony / Event</p></li>
+              <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#snap"><img src="img/photo04.webp" alt="作品4" decoding="async"></a></div><p class="carousel-title">Snap</p></li>
+            </ul>
 
-  <!-- 2組目 -->
-  <ul class="carousel-list" aria-hidden="true">
-    <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#artwork"><img src="img/photo01.webp" alt="作品1" decoding="async"></a></div><p class="carousel-title">Artwork</p></li>
-    <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#portrait"><img src="img/photo02.webp" alt="作品2" decoding="async"></a></div><p class="carousel-title">Portrait</p></li>
-    <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#ceremony-Event"><img src="img/photo03.webp" alt="作品3" decoding="async"></a></div><p class="carousel-title">Ceremony / Event</p></li>
-    <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#snap"><img src="img/photo04.webp" alt="作品4" decoding="async"></a></div><p class="carousel-title">Snap</p></li>
-  </ul>
+            <!-- 3組目 -->
+            <ul class="carousel-list" aria-hidden="true">
+              <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#artwork"><img src="img/photo01.webp" alt="作品1" decoding="async"></a></div><p class="carousel-title">Artwork</p></li>
+              <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#portrait"><img src="img/photo02.webp" alt="作品2" decoding="async"></a></div><p class="carousel-title">Portrait</p></li>
+              <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#ceremony-Event"><img src="img/photo03.webp" alt="作品3" decoding="async"></a></div><p class="carousel-title">Ceremony / Event</p></li>
+              <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#snap"><img src="img/photo04.webp" alt="作品4" decoding="async"></a></div><p class="carousel-title">Snap</p></li>
+            </ul>
 
-  <!-- 3組目（追加） -->
-  <ul class="carousel-list" aria-hidden="true">
-    <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#artwork"><img src="img/photo01.webp" alt="作品1" decoding="async"></a></div><p class="carousel-title">Artwork</p></li>
-    <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#portrait"><img src="img/photo02.webp" alt="作品2" decoding="async"></a></div><p class="carousel-title">Portrait</p></li>
-    <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#ceremony-Event"><img src="img/photo03.webp" alt="作品3" decoding="async"></a></div><p class="carousel-title">Ceremony / Event</p></li>
-    <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#snap"><img src="img/photo04.webp" alt="作品4" decoding="async"></a></div><p class="carousel-title">Snap</p></li>
-  </ul>
-
-  <!-- 4組目（追加） -->
-  <ul class="carousel-list" aria-hidden="true">
-    <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#artwork"><img src="img/photo01.webp" alt="作品1" decoding="async"></a></div><p class="carousel-title">Artwork</p></li>
-    <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#portrait"><img src="img/photo02.webp" alt="作品2" decoding="async"></a></div><p class="carousel-title">Portrait</p></li>
-    <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#ceremony-Event"><img src="img/photo03.webp" alt="作品3" decoding="async"></a></div><p class="carousel-title">Ceremony / Event</p></li>
-    <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#snap"><img src="img/photo04.webp" alt="作品4" decoding="async"></a></div><p class="carousel-title">Snap</p></li>
-  </ul>
-</div>
-</div>
+            <!-- 4組目 -->
+            <ul class="carousel-list" aria-hidden="true">
+              <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#artwork"><img src="img/photo01.webp" alt="作品1" decoding="async"></a></div><p class="carousel-title">Artwork</p></li>
+              <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#portrait"><img src="img/photo02.webp" alt="作品2" decoding="async"></a></div><p class="carousel-title">Portrait</p></li>
+              <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#ceremony-Event"><img src="img/photo03.webp" alt="作品3" decoding="async"></a></div><p class="carousel-title">Ceremony / Event</p></li>
+              <li class="carousel-item"><div class="carousel-img"><a href="gallery.html#snap"><img src="img/photo04.webp" alt="作品4" decoding="async"></a></div><p class="carousel-title">Snap</p></li>
+            </ul>
+            
+          </div>
+        </section>
       </section>
       <!-- /gallery section -->
     </main>
 
     <!-- footer -->
     <footer class="footer">
+      <div class="counter-area">
+        <p class="counter-label">COUNTER</p>
+        <!-- FC2カウンター ここから -->
+        <script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=41143325&main=1" defer></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=41143325&main=1" /></noscript>
+        <!-- FC2カウンター ここまで -->
+      </div><!-- ★ここに閉じタグを追加しました -->
+
       <div class="copyright">&copy;2026 bito.photo</div>
     </footer>
     <!-- /footer -->

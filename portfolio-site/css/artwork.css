@@ -94,7 +94,7 @@ ul {
 .gnav-item a {
   position: relative;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 500;
   display: inline-block;
   padding: 5px 0;
   transition: .3s;

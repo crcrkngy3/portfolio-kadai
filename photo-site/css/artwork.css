@@ -1,0 +1,362 @@
+@charset "UTF-8";
+
+/* ----------
+共通部分 
+-------------*/
+body {
+  font-family: "Poppins", "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: .05em;
+  color: #333333;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* PC・スマホ表示切り替え */
+.pc-only {
+  display: block;
+}
+
+.sp-only {
+  display: none; /* PCではスマホ用を隠す */
+}
+
+
+/*----------
+ サイト全体に効かせる設定
+ ----------- */
+.section {
+  padding: 90px 0;
+}
+
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/*----------
+ header 
+ -----------*/
+.header {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.header-top {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  gap: 10px; 
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px; 
+  padding: 20px 40px;
+}
+
+.header-logo {
+  display: block;
+}
+
+.header-logo img {
+  width: 100px; 
+  height: auto; 
+}
+
+
+/*----------
+ナビゲーションメニュー
+------------*/
+.gnav-list {
+  display: flex;
+  gap: 20px;
+}
+
+.gnav-item a {
+  position: relative;
+  font-size: 15px;
+  font-weight: 500;
+  display: inline-block;
+  padding: 5px 0;
+  transition: .3s;
+  letter-spacing: .05em;
+}
+
+/* カーソル合わせた時に下に下線が出る仕様にする */
+.gnav-item a:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  content: "";
+  transition: .3s;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #333333;
+}
+
+.gnav-item a:hover:after {
+  width: 100%;
+}
+
+/*---------------------------------
+  Artwork ページ全体のレイアウト
+---------------------------------*/
+.artwork-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* コンテンツをすべて中央揃え */
+  max-width: 900px;     /* 全体の最大幅 */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/*---------------------------------
+  1. 上部：案内テキスト領域 (.artwork-intro)
+---------------------------------*/
+.artwork-intro {
+  width: 100%;
+  max-width: 700px;         /* ボックスの幅 */
+  background-color: #f7f7f7; /* 薄いグレーの背景色 */
+  padding: 24px 20px;       /* 内側の上下余白 */
+  margin-top: 20px;
+  margin-bottom: 70px;      /* 下の作品1つ目との余白 */
+  text-align: center;      /* テキスト中央寄せ */
+  border-radius: 4px;
+}
+
+.intro-line {
+  font-size: 13px;
+  color: #333333;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+/*---------------------------------
+  2. 作品アイテム (.artwork-item)
+---------------------------------*/
+.artwork-item {
+  width: 100%;
+  max-width: 700px;         /* 写真・テキスト枠の幅 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* 中央揃え */
+  margin-bottom: 90px;      /* 作品同士の間隔 */
+}
+
+/* 画像を囲むリンク・枠 */
+.artwork-img-link {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+
+.artwork-img {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;     /* 画像と文字の間隔 */
+}
+
+.artwork-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* 画像ホバー時の処理（ほんのり薄くする） */
+.artwork-img-link:hover .artwork-img img {
+  opacity: 0.85;
+}
+
+
+/*---------------------------------
+  2点横並び用レイアウト (滝田さんのみ)
+---------------------------------*/
+.artwork-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;  /* 上揃え */
+  gap: 30px;                /* 2つの作品の間の隙間 */
+  width: 100%;
+  max-width: 700px;         /* 親要素の幅に合わせる */
+  margin-bottom: 90px;      /* 下の作品（soil）との余白 */
+}
+
+/* 横並びグループ内の各アイテム幅調整 */
+.artwork-row .artwork-item {
+  width: calc(50% - 15px);  /* 2列用に幅を半分にする */
+  margin-bottom: 0;         /* 親要素で余白を持つため削除 */
+}
+/*---------------------------------
+  3. キャプション・テキストリンク（★ホバー設定）
+---------------------------------*/
+.artwork-caption {
+  text-align: center;      /* テキスト中央寄せ */
+}
+
+/* テキスト全体を囲むリンク */
+.caption-link {
+  display: block;           /* エリア全体をブロック化 */
+  text-decoration: none;    /* 下線を消す */
+  color: #333333;           /* 通常時の文字色 */
+  transition: color 0.3s ease, opacity 0.3s ease, transform 0.1s ease; /* なめらかに変化させる設定 */
+}
+
+/* 通常時の各文字スタイル */
+.artist-title {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 6px;
+  color: inherit;           /* 親要素（caption-link）の色を継承 */
+}
+
+.artwork-detail {
+  font-size: 13px;
+  line-height: 1.7;
+  color: inherit;           /* 親要素（caption-link）の色を継承 */
+}
+
+/* ★PCホバー時の変化設定（色を柔らかいグレーに変化＋わずかに透明化） */
+.caption-link:hover {
+  color: #888888;          /* ホバー時に変化させたい文字色 */
+  opacity: 0.8;            /* 少し透明感を出す */
+}
+
+/* ★スマホ等でタップした瞬間の反応 */
+.caption-link:active {
+  transform: scale(0.98);   /* 押した瞬間にほんの少し縮む */
+  opacity: 0.6;
+}
+
+
+/*---------------------------------
+ Backボタン (footerの上)
+---------------------------------*/
+.back-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 180px;
+  padding: 12px 0;
+  background-color: #f8f8f8;
+  color: #333333;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.back-arrow {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.back-btn:hover {
+  background-color: #dcdcdc;
+  color: #ffffff;
+}
+
+/* footer */
+.footer {
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+.copyright {
+  font-size: 10px;
+  text-align: center;
+  color: #797979;
+}
+
+/*---------------------------------
+  スマホ対応（768px以下）
+---------------------------------*/
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 50px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .header .container {
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 30px;
+  }
+  
+  .header-logo img {
+    width: 50px;
+    height: auto; 
+  }
+
+  .artwork-intro {
+    padding: 18px 15px;
+    margin-bottom: 50px;
+  }
+
+  .intro-line {
+    font-size: 8px;
+    line-height: 1.6;
+  }
+
+  .artwork-item {
+    margin-bottom: 60px;   /* スマホでは間隔を少し狭く */
+  }
+
+  .artwork-img {
+    margin-bottom: 14px;
+  }
+
+  .artist-title {
+    font-size: 12px;
+  }
+
+  .artwork-detail {
+    font-size: 8px;
+  }
+
+  .artwork-row {
+    gap: 15px;              /* 隙間を狭く */
+    margin-bottom: 60px;
+  }
+
+  .artwork-row .artwork-item {
+    width: calc(50% - 7.5px);
+  }
+
+}

@@ -160,6 +160,16 @@ ul {
 }
 
 
+/* おまけテキスト部分 */
+.gallery-lead {
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 40px auto 10px;
+  color: #333333;
+  width: 100%;
+}
+
 /*---------------------------------
  Backボタン (footerの上)
 ---------------------------------*/
@@ -260,5 +270,10 @@ ul {
   .back-btn-container {
     margin-top: 50px;
     margin-bottom: 40px;
+  }
+
+  .gallery-lead {
+    margin: 30px auto 12px; /* スマホ時は少し狭める */
+    font-size: 10px;
   }
 }

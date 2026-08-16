@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-  <html lang="ja">
+<html lang="ja">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +7,19 @@
   <link rel="icon" href="img/logo.webp">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   
-  <title>Event/Ceremony</title>
+  <title>Contact</title>
 
   <!-- フォントの指定 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Itim&family=Kiwi+Maru&family=Poppins:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+  
   <!-- CSSの設定 -->
   <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
-  <link href="css/page.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="css/contact.css" media="all" rel="stylesheet" type="text/css" />
 </head>
-  <body>
-<!-- 全体の箱をwrapperとする -->
+<body>
+  <!-- 全体の箱をwrapperとする -->
   <div class="wrapper">
 
     <!-- header -->
@@ -29,17 +30,57 @@
         </h1>
         <nav class="gnav">
           <ul class="gnav-list">
-            <li class="gnav-item"><a href="index.html">Home</a></li>
+             <li class="gnav-item"><a href="index.html">Home</a></li>
             <li class="gnav-item"><a href="gallery.html">Gallery</a></li>
+            <li class="gnav-item"><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <!-- /header -->
+
+    <!-- main -->
+    <main class="content container">
+      <!-- PCは横並び / スマホは縦並びエリア -->
+      <div class="contact-wrapper">
+        
+        <!-- 左側：写真 (MV) -->
+        <div class="mv">
+          <div class="mv-container">
+            <img src="img/photo06.webp" alt="メイン画像" class="blur-in">
+            <h2 class="mv-title">CONTACT</h2>
+          </div>
+        </div>
+
+    <!-- 右側：問い合わせ本文 -->
+<section class="contact-section" id="contact">
+  <p class="lead">
+    お問い合わせは、<br class="sp-only">下記フォームよりお願いいたします。
+  </p>
+
+  <div class="contact-list">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAqy-4ib3GhJZEsVZXw9C1ES0pifnUsLtk54N7_JQKo5bpYg/viewform?usp=header" target="_blank" rel="noopener noreferrer" aria-label="お問い合わせフォームを開く">
+      <img src="img/mail.svg" alt="お問い合わせフォーム">
+    </a>
+  </div>
+
+  <!-- ★ class="lead" から class="note" に変更 -->
+  <p class="note">
+    ※Homeのカウンターの数字がキリの良い番号（100、1000など）だった方は、<br>
+    ぜひスクショを送ってみてください。何か良いことがあるかもしれません。</p>
+</section>
+
+      </div>
+    </main>
+    <!-- /main -->
+
+    <!-- footer -->
     <footer class="footer">
       <div class="copyright">&copy;2026 bito.photo</div>
     </footer>
+    <!-- /footer -->
 
   </div>
+  <!-- /.wrapper -->
 </body>
 </html>

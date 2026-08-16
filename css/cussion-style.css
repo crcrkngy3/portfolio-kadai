@@ -429,8 +429,9 @@ ul {
     margin-bottom: 20px;
   }
 
+  /* SP表示での固定ヘッダー分の余白を拡張 */
   .wrapper {
-    padding-top: 57px;
+    padding-top: 220px;
   }
 
   .section {
@@ -490,9 +491,10 @@ ul {
     font-size: 12px;
   }
 
+  /* 上部に十分なマージンを確保 */
   .mv {
     height: auto;
-    margin-top: 100px;
+    margin-top: 60px;
   }
 
   .mv-container {

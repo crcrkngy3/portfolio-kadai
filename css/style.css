@@ -278,11 +278,11 @@ padding: 0 20px;
 }
 .tech-labels{
   position: absolute;  
-  top: 10px;           
+  top: 10px;         
   left: 10px;         
   display: flex;      
-  gap: 5px;           
-  z-index: 10;         
+  gap: 5px;          
+  z-index: 10;        
 }
 
 .label{
@@ -539,8 +539,9 @@ transition: 0.3s;
     justify-content: space-between;
   }
 
+  /* 携帯時のみ1縦列で全幅表示に変更 */
   .works-item {
-    flex: 0 0 48%;
+    flex: 0 0 100%;
     margin-right: 0;
     margin-bottom: 30px;
   }
@@ -593,3 +594,4 @@ transition: 0.3s;
   .footer {
     padding: 20px;
   }
+}

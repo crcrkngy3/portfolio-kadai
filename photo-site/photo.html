@@ -19,10 +19,10 @@
 </head>
 
 <body>
-  <!-- 全体の箱をwrapperとする -->
+  <!-- 全体の囲み -->
   <div class="wrapper">
 
-    <!-- header -->
+    <!-- ヘッダー -->
     <header class="header">
       <div class="container">
         <h1 class="header-logo">
@@ -44,35 +44,31 @@
           <ul class="page-nav-list">
             <li><a href="#PREVIEW">PREVIEW</a></li>
             <li><a href="#SKILL">SKILL</a></li>
-            <li><a href="#PERSONA">PERSONA</a></li>
             <li><a href="#POINT">POINT</a></li>
             <li><a href="#CONCEPT">CONCEPT</a></li>
-            <li><a href="#OTHER">OTHER</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <!-- /header -->
 
-    <!-- main -->
+    <!-- メインコンテンツ -->
     <main class="content" id="PREVIEW">
 
-      <!-- mv -->
+      <!-- メインビジュアル -->
       <div class="mv">
         <div class="mv-container">
           <img src="../img/cushion/photo-site-preview.png" alt="写真アーカイブサイトのイメージ画像">
         </div>
       </div>
-      <!-- /mv -->
 
       <!-- サイトに移動するボタン -->
       <div class="view-site-container">
-        <a href="../photo-site/index.html" target="_blank" class="btn-view-site">
+        <a href="../photo-site/index.html" target="_blank" rel="noopener noreferrer" class="btn-view-site">
           View Website →
         </a>
       </div>
 
-      <!-- skill -->
+      <!-- スキル -->
       <section class="skill section" id="SKILL">
         <div class="container">
           <h2 class="title">SKILL</h2>
@@ -99,86 +95,55 @@
         </div>
       </section>
 
-      <!-- persona -->
-      <section class="concept section" id="PERSONA">
-        <div class="container">
-          <h2 class="title">PERSONA</h2>
-
-          <div class="works-detail">
-            <div class="detail-row">
-              <div class="detail-icon">
-                <img src="../img/cushion/visitor.png" alt="来訪者のアイコン">
-              </div>
-
-              <div class="detail-text">
-                <h3>来訪者：SNSからサイトへ移動してきた写真好きな20代女性様</h3>
-                <p>「この人の世界観が好き。どんな写真を撮っているんだろう。」<br>
-                  「個人サイトを持っているんだ、じっくり見てみたい。」</p>
-              </div>
-            </div>
-
-            <div class="detail-row reverse">
-              <div class="detail-icon">
-                <img src="../img/cushion/client.png" alt="制作者のアイコン">
-              </div>
-
-              <div class="detail-text">
-                <h3>製作者：「人との繋がり」が伝わるサイトにしたい</h3>
-                <p>「単なる写真一覧ではなく、紹介している作家への想いや背景も含めて届けたい」<br>
-                  「余白や静けさを大切に、一枚ずつじっくり鑑賞してほしい」</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- point -->
+      <!-- 制作のポイント -->
       <section class="works section" id="POINT">
         <div class="container">
           <h2 class="title">POINT</h2>
           <div class="consept-text">
-            <p>ゆっくりとフェードインする画像・テキスト演出<br>
-              写真と言葉を引き立てる余白を活かしたデザイン<br>
-              サイト全体で統一された静かなトーン＆マナー<br>
+            <p>ゆっくりとフェードインする画像・テキスト演出<br class="pc-only">
+              写真と言葉を引き立てる余白を活かしたデザイン<br class="pc-only">
+              サイト全体で統一された静かなトーン＆マナー<br class="pc-only">
               初めての来訪者でも直感的に回遊できるUI設計</p>
           </div>
         </div>
       </section>
 
-      <!-- concept -->
+      <!-- コンセプト -->
       <section class="bridge-section" id="CONCEPT">
         <div class="container">
           <h2 class="title">CONCEPT</h2>
           <h3 class="summary-phrase">「心に触れる、記憶のアーカイブ」</h3>
           <p class="summary-description">
-            単に作品を並べるのではなく、<br>
-            写真の背景にある物語や、被写体との愛おしい距離感を届けること。<br>
-            大切にしている人との繋がりや、自分らしい眼差しがそっと伝わり、<br>
-            訪れた人が静かな温度感の中で心を寄せていけるような、<br>
+            単に作品を並べるのではなく、<br class="pc-only">
+            写真の背景にある物語や、被写体との愛おしい距離感を届けること。<br class="pc-only">
+            大切にしている人との繋がりや、自分らしい眼差しがそっと伝わり、<br class="pc-only">
+            訪れた人が静かな温度感の中で心を寄せていけるような、<br class="pc-only">
             誠実で心地よい場所を目指しました。</p>
         </div>
       </section>
 
       <!-- サイトに移動するボタン -->
       <div class="view-site-container">
-        <a href="../photo-site/index.html" target="_blank" class="btn-view-site">
+        <a href="../photo-site/index.html" target="_blank" rel="noopener noreferrer" class="btn-view-site">
           View Website →
         </a>
       </div>
 
-      <!-- TOPへ戻るボタン -->
+      <!-- ページトップへ戻るボタン -->
       <div class="page-top" id="js-page-top">
         <span class="material-icons-outlined">expand_less</span>
       </div>
     </main>
 
-    <!-- footer -->
+    <!-- フッター -->
     <footer class="footer">
       <div class="copyright">&copy;TOZUKA MANAMI 2026</div>
     </footer>
-    <!-- /footer -->
 
   </div>
 
+  <!-- JavaScriptの読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
 </body>
 </html>

@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <title>photosite Details</title>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="写真アーカイブサイトについての説明ページです。">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="icon" href="../img/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <title>photosite Details</title>
+
+  <!-- フォントの指定 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Itim&family=Kiwi+Maru&family=Poppins:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="../css/ress.css" media="all" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="../css/cussion-style.css" >
+  <!-- CSSの設定 -->
+  <link href="../css/ress.css" media="all" rel="stylesheet" type="text/css">
+  <link href="../css/cussion-style.css" rel="stylesheet">
 </head>
+
 <body>
+  <!-- 全体の箱をwrapperとする -->
+  <div class="wrapper">
+
     <!-- header -->
     <header class="header">
       <div class="container">
@@ -38,141 +46,132 @@
             <li><a href="#SKILL">SKILL</a></li>
             <li><a href="#PERSONA">PERSONA</a></li>
             <li><a href="#POINT">POINT</a></li>
-           <li><a href="#CONCEPT">CONCEPT</a></li>
+            <li><a href="#CONCEPT">CONCEPT</a></li>
             <li><a href="#OTHER">OTHER</a></li>
           </ul>
         </nav>
       </div>
-
-
-
     </header>
     <!-- /header -->
 
-
-  <!-- main -->
+    <!-- main -->
     <main class="content" id="PREVIEW">
 
       <!-- mv -->
       <div class="mv">
         <div class="mv-container">
-          <img src="../img/cushion/photo-site-preview.png" alt="写真アーカイブサイトのイメージ画像"> 
+          <img src="../img/cushion/photo-site-preview.png" alt="写真アーカイブサイトのイメージ画像">
         </div>
       </div>
+      <!-- /mv -->
 
       <!-- サイトに移動するボタン -->
-<div class="view-site-container">
-  <a href="../photo-site/index.html" target="_blank" class="btn-view-site">
-    View Website →
-  </a>
-</div>
+      <div class="view-site-container">
+        <a href="../photo-site/index.html" target="_blank" class="btn-view-site">
+          View Website →
+        </a>
+      </div>
 
+      <!-- skill -->
+      <section class="skill section" id="SKILL">
+        <div class="container">
+          <h2 class="title">SKILL</h2>
 
- <!-- Technical Point / 技術的なこだわり -->
-  <!-- 以下HOMEと同じ仕様にするもしかしたら閉じタグ足りないかも -->
-<section class="skill section" id="SKILL">
-  <div class="container">
-        <h2 class="title">SKILL</h2>
+          <div class="tech-container">
+            <div class="tech-card">
+              <div class="tech-num">01</div>
+              <h3>Visual Design / STUDIO</h3>
+              <p>ノーコードツール「STUDIO」を活用し、サイト全体のマージンやレスポンシブな配置を含むプロトタイプ（レイアウトデザイン）を作成しました。ビジュアルイメージを早期に可視化することで、実際のコード実装へスムーズに移行できる設計力を意識しています。</p>
+            </div>
 
-<div class="tech-container">
-    <div class="tech-card">
-    <div class="tech-num">01</div>
-      <h3>Visual Design / STUDIO</h3>
-      <p>ノーコードツール「STUDIO」を活用し、サイト全体のマージンやレスポンシブな配置を含むプロトタイプ（レイアウトデザイン）を作成しました。ビジュアルイメージを早期に可視化することで、実際のコード実装へスムーズに移行できる設計力を意識しています。</p>
-    </div>
+            <div class="tech-card">
+              <div class="tech-num">02</div>
+              <h3>Coding / HTML & CSS</h3>
+              <p>STUDIOで構築したデザインを忠実に再現するため、HTML/CSSによるコーディングを行いました。コンテンツの構造化と、余白感・レスポンシブ対応を意識した再現性の高いコーディングを実践しています。</p>
+            </div>
 
-    <div class="tech-card">
-      <div class="tech-num">02</div>
-      <h3>Coding / HTML & CSS</h3>
-      <p>STUDIOで構築したデザインを忠実に再現するため、HTML/CSSによるコーディングを行いました。コンテンツの構造化と、余白感・レスポンシブ対応を意識した再現性の高いコーディングを実践しています。</p>
-    </div>
+            <div class="tech-card">
+              <div class="tech-num">03</div>
+              <h3>UI・UX Design / CSS & AI</h3>
+              <p>スライダー（カルーセル）機能などの動的・視覚的要素の実装にあたり、AIツールを活用して効率的な構造やCSSの組み方を検証・導入しました。未知の実装仕様に対してもAIを連携させながら調べ、思い通りのレイアウトを形にする応用力を実践しています。</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-     <div class="tech-card">
-     <div class="tech-num">03</div>
-      <h3>UI・UX Design / CSS & AI</h3>
-      <p>スライダー（カルーセル）機能などの動的・視覚的要素の実装にあたり、AIツールを活用して効率的な構造やCSSの組み方を検証・導入しました。未知の実装仕様に対してもAIを連携させながら調べ、思い通りのレイアウトを形にする応用力を実践しています。</p>
-    </div>
+      <!-- persona -->
+      <section class="concept section" id="PERSONA">
+        <div class="container">
+          <h2 class="title">PERSONA</h2>
 
-    </div>
-  </div>
-</section>
+          <div class="works-detail">
+            <div class="detail-row">
+              <div class="detail-icon">
+                <img src="../img/cushion/visitor.png" alt="来訪者のアイコン">
+              </div>
 
+              <div class="detail-text">
+                <h3>来訪者：SNSからサイトへ移動してきた写真好きな20代女性様</h3>
+                <p>「この人の世界観が好き。どんな写真を撮っているんだろう。」<br>
+                  「個人サイトを持っているんだ、じっくり見てみたい。」</p>
+              </div>
+            </div>
 
-<!-- PERSONA-->
- <section class="concept section" id="PERSONA">
-  <div class="container">
-        <h2 class="title">PERSONA</h2>
+            <div class="detail-row reverse">
+              <div class="detail-icon">
+                <img src="../img/cushion/client.png" alt="制作者のアイコン">
+              </div>
 
-<div class="works-detail">
-  <div class="detail-row">
-    <div class="detail-icon">
-      <img src="../img/cushion/visitor.png" alt="来訪者のアイコン"></div>
-       
-         <div class="detail-text">
-         <h3>来訪者：SNSからサイトへ移動してきた写真好きな20代女性様</h3>
-          <p>「この人の世界観が好き。どんな写真を撮っているんだろう。」<br>
-        「個人サイトを持っているんだ、じっくり見てみたい。」</p>
-    </div>
-     
-  </div>
+              <div class="detail-text">
+                <h3>製作者：「人との繋がり」が伝わるサイトにしたい</h3>
+                <p>「単なる写真一覧ではなく、紹介している作家への想いや背景も含めて届けたい」<br>
+                  「余白や静けさを大切に、一枚ずつじっくり鑑賞してほしい」</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <div class="detail-row reverse">
-    <div class="detail-icon">
-      <img src="../img/cushion/client.png" alt="制作者のアイコン"></div>
-           <div class="detail-text">
-           <h3>製作者：「人との繋がり」が伝わるサイトにしたい</h3>
-             <p>「単なる写真一覧ではなく、紹介している作家への想いや背景も含めて届けたい」<br>
-        「余白や静けさを大切に、一枚ずつじっくり鑑賞してほしい」</p>
-    </div>
-   </div>
-   </div>
-   </div>
-</section>
-
- 
-<!-- こだわり詳細 -->
- <section class="works section" id="POINT">
-    <div class="container">
-      <h2 class="title">POINT</h2>
-         <div class="consept-text">
+      <!-- point -->
+      <section class="works section" id="POINT">
+        <div class="container">
+          <h2 class="title">POINT</h2>
+          <div class="consept-text">
             <p>ゆっくりとフェードインする画像・テキスト演出<br>
-            写真と言葉を引き立てる余白を活かしたデザイン<br>
+              写真と言葉を引き立てる余白を活かしたデザイン<br>
               サイト全体で統一された静かなトーン＆マナー<br>
               初めての来訪者でも直感的に回遊できるUI設計</p>
-         </div>
-    </div>
-</section>
+          </div>
+        </div>
+      </section>
 
-
-
-<!-- キャッチコピー（一言で伝える） -->
- <section class="bridge-section" id="CONCEPT">
+      <!-- concept -->
+      <section class="bridge-section" id="CONCEPT">
         <div class="container">
           <h2 class="title">CONCEPT</h2>
-    <h3 class="summary-phrase">「心に触れる、記憶のアーカイブ」</h3>
-    <p class="summary-description">
-         単に作品を並べるのではなく、<br>
-写真の背景にある物語や、被写体との愛おしい距離感を届けること。<br>
-大切にしている人との繋がりや、自分らしい眼差しがそっと伝わり、<br>
-訪れた人が静かな温度感の中で心を寄せていけるような、<br>
-誠実で心地よい場所を目指しました。</p>
-  </div>
-</section>
+          <h3 class="summary-phrase">「心に触れる、記憶のアーカイブ」</h3>
+          <p class="summary-description">
+            単に作品を並べるのではなく、<br>
+            写真の背景にある物語や、被写体との愛おしい距離感を届けること。<br>
+            大切にしている人との繋がりや、自分らしい眼差しがそっと伝わり、<br>
+            訪れた人が静かな温度感の中で心を寄せていけるような、<br>
+            誠実で心地よい場所を目指しました。</p>
+        </div>
+      </section>
 
+      <!-- サイトに移動するボタン -->
+      <div class="view-site-container">
+        <a href="../photo-site/index.html" target="_blank" class="btn-view-site">
+          View Website →
+        </a>
+      </div>
 
-<!-- サイトに移動するボタン -->
-<div class="view-site-container">
-  <a href="../photo-site/index.html" target="_blank" class="btn-view-site">
-    View Website →</span>
-  </a>
-</div>
- 
-
-     <!-- TOPへ戻るボタン -->
+      <!-- TOPへ戻るボタン -->
       <div class="page-top" id="js-page-top">
         <span class="material-icons-outlined">expand_less</span>
       </div>
-</main>
+    </main>
+
     <!-- footer -->
     <footer class="footer">
       <div class="copyright">&copy;TOZUKA MANAMI 2026</div>
@@ -180,8 +179,6 @@
     <!-- /footer -->
 
   </div>
-  <!-- 以下jQueryと自分で書くjavascriptを読み込むためのコードです -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script type='text/javascript' src="../js/script.js"></script>
+
 </body>
 </html>

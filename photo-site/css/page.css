@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* ----------
-共通部分 
+  共通部分
 -------------*/
 body {
   font-family: "Poppins", "Zen Maru Gothic", sans-serif;
@@ -32,9 +32,9 @@ img {
 }
 
 
-/*----------
- サイト全体に効かせる設定
- ----------- */
+/* ----------
+  サイト全体設定
+-------------*/
 .section {
   padding: 90px 0;
 }
@@ -50,9 +50,9 @@ ul {
 }
 
 
-/*----------
- header 
- -----------*/
+/* ----------
+  ヘッダー
+-------------*/
 .header {
   width: 100%;
   background-color: #ffffff;
@@ -83,9 +83,9 @@ ul {
 }
 
 
-/*----------
-ナビゲーションメニュー
-------------*/
+/* ----------
+  ナビゲーションメニュー
+-------------*/
 .gnav-list {
   display: flex;
   gap: 20px;
@@ -101,8 +101,8 @@ ul {
   letter-spacing: .05em;
 }
 
-/* カーソル合わせた時に下に下線が出る仕様にする */
-.gnav-item a:after {
+/* ホバー時に下線を表示 */
+.gnav-item a::after {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -115,16 +115,16 @@ ul {
   background-color: #333333;
 }
 
-.gnav-item a:hover:after {
+.gnav-item a:hover::after {
   width: 100%;
 }
 
 
-/*---------------------------------
- 写真ギャラリーエリア（追加部分）
----------------------------------*/
+/* ----------
+  写真ギャラリーエリア
+-------------*/
 .photo-gallery {
-  max-width: 900px; /* 写真全体の表示幅（好みに合わせて調整可能） */
+  max-width: 900px; /* 写真全体の表示幅 */
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -132,8 +132,8 @@ ul {
 /* グリッド共通の余白 */
 .photo-grid {
   display: grid;
-  gap: 20px; /* 写真と写真の間のすき間 */
-  margin-bottom: 20px; /* 段ごとの下の余白 */
+  gap: 20px; /* 写真同士の隙間 */
+  margin-bottom: 20px; /* 段ごとの下余白 */
 }
 
 /* 2列レイアウト */
@@ -159,7 +159,6 @@ ul {
   object-fit: cover;
 }
 
-
 /* おまけテキスト部分 */
 .gallery-lead {
   text-align: center;
@@ -170,9 +169,10 @@ ul {
   width: 100%;
 }
 
-/*---------------------------------
- Backボタン (footerの上)
----------------------------------*/
+
+/* ----------
+  戻るボタン
+-------------*/
 .back-btn-container {
   display: flex;
   justify-content: center;
@@ -206,7 +206,10 @@ ul {
   color: #ffffff;
 }
 
-/* footer */
+
+/* ----------
+  フッター
+-------------*/
 .footer {
   padding: 30px;
   background-color: #ffffff;
@@ -219,9 +222,9 @@ ul {
 }
 
 
-/*---------------------------------
- スマホ対応（768px以下）
----------------------------------*/
+/* ----------
+  レスポンシブ（768px以下）
+-------------*/
 @media screen and (max-width: 768px) {
   /* PC・スマホ表示切り替え */
   .pc-only {
@@ -258,11 +261,10 @@ ul {
   }
 
   .photo-grid {
-    gap: 12px; /* スマホでは間隔を少し狭める */
+    gap: 12px;
     margin-bottom: 12px;
   }
 
-  /* スマホ時も基本は2列レイアウトを保持（もし1列にしたい場合は以下を 1fr に変更してください） */
   .grid-2col {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -273,7 +275,7 @@ ul {
   }
 
   .gallery-lead {
-    margin: 30px auto 12px; /* スマホ時は少し狭める */
+    margin: 30px auto 12px;
     font-size: 10px;
   }
 }

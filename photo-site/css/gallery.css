@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
-/* ----------
-共通部分 
--------------*/
+/* 共通部分 */
 body {
   font-family: "Poppins", "Zen Maru Gothic", sans-serif;
   font-weight: 400;
@@ -22,19 +20,15 @@ img {
   vertical-align: bottom;
 }
 
-/* PC・スマホ表示切り替え */
 .pc-only {
   display: block;
 }
 
 .sp-only {
-  display: none; /* PCではスマホ用を隠す */
+  display: none;
 }
 
-
-/*----------
- サイト全体に効かせる設定
- ----------- */
+/* 全体設定 */
 .section {
   padding: 90px 0;
 }
@@ -49,10 +43,7 @@ ul {
   list-style: none;
 }
 
-
-/*----------
- header 
- -----------*/
+/* ヘッダー */
 .header {
   width: 100%;
   background-color: #ffffff;
@@ -82,10 +73,7 @@ ul {
   height: auto; 
 }
 
-
-/*----------
-ナビゲーションメニュー
-------------*/
+/* ナビゲーション */
 .gnav-list {
   display: flex;
   gap: 20px;
@@ -101,8 +89,6 @@ ul {
   letter-spacing: .05em;
 }
 
-
-/* カーソル合わせた時に下に下線が出る仕様にする */
 .gnav-item a:after {
   position: absolute;
   bottom: 0;
@@ -120,10 +106,7 @@ ul {
   width: 100%;
 }
 
-
-/*----------
- ギャラリー一覧（PC表示）
------------*/
+/* ギャラリー一覧 */
 .gallery-section .container {
   display: flex;
   flex-direction: column;
@@ -135,29 +118,26 @@ ul {
   padding-right: 40px;
 }
 
-/* 1ブロック（画像とテキストの横並び） */
 .gallery-container {
   display: flex;
-  align-items: center; /* 縦中央揃え */
-  gap: 60px;           /* 画像とテキストの間の距離 */
+  align-items: center;
+  gap: 60px;
 }
 
-/* ★修正点：画像リンクとテキストリンク領域の調整 */
 .gallery-img-link {
   display: block;
-  flex-shrink: 0; /* 画像枠の縮小防止 */
+  flex-shrink: 0;
   text-decoration: none;
   color: inherit;
 }
 
 .gallery-text-link {
   display: block;
-  flex: 1; /* ★ここが重要！テキストエリアを右側にいっぱい広げて確実にタップ・ホバーできるようにする */
+  flex: 1;
   text-decoration: none;
   color: inherit;
 }
 
-/* 左側：画像枠 */
 .gallery-img {
   width: 400px;
   height: 400px;
@@ -171,7 +151,6 @@ ul {
   transition: transform 0.4s ease;
 }
 
-/* 右側：テキストエリア */
 .gallery-text-box {
   width: 100%;
 }
@@ -190,20 +169,15 @@ ul {
   color: #333333;
 }
 
-/* 画像ホバー時の処理（1.05倍に拡大） */
 .gallery-img-link:hover .gallery-img img {
   transform: scale(1.05);
 }
 
-/* テキストホバー時にタイトルだけ少し薄くする */
 .gallery-text-link:hover .gallery-title {
   opacity: 0.7;
 }
 
-
-/*---------------------------------
- Backボタン (footerの上)
----------------------------------*/
+/* 戻るボタン */
 .back-btn-container {
   display: flex;
   justify-content: center;
@@ -237,7 +211,7 @@ ul {
   color: #ffffff;
 }
 
-/* footer */
+/* フッター */
 .footer {
   padding: 30px;
   background-color: #ffffff;
@@ -249,12 +223,8 @@ ul {
   color: #797979;
 }
 
-
-/*---------------------------------
- スマホ対応（768px以下）
----------------------------------*/
+/* レスポンシブ（768px以下） */
 @media screen and (max-width: 768px) {
-
   .section {
     padding: 50px 0;
   }
@@ -274,7 +244,6 @@ ul {
     height: auto; 
   }
 
-  /* gallery */
   .gallery-section .container {
     width: 100%;
     max-width: 100%;
@@ -335,7 +304,6 @@ ul {
     opacity: 0.6;
   }
 
-  /* backボタン */
   .back-btn-container {
     margin-top: 50px;
     margin-bottom: 40px;
@@ -347,12 +315,11 @@ ul {
     font-size: 16px;
   }
 
-  /* 表示切り替え */
   .pc-only {
     display: none;
   }
+
   .sp-only {
     display: block;
   }
-
 }

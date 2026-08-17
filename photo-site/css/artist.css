@@ -1,16 +1,14 @@
 @charset "UTF-8";
 
-/* ----------
-共通部分 
--------------*/
+/* 共通部分 */
 body {
+  width: 100%;
   font-family: "Poppins", "Zen Maru Gothic", sans-serif;
   font-weight: 400;
   font-size: 16px;
   letter-spacing: .05em;
   color: #333333;
-  overflow-x: hidden; /* 横スクロール防止 */
-  width: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -24,17 +22,15 @@ img {
   vertical-align: bottom;
 }
 
-/* PC・スマホ表示切り替え */
 .pc-only {
   display: block;
 }
+
 .sp-only {
   display: none;
 }
 
-/*----------
- サイト全体に効かせる設定
- ----------- */
+/* 全体設定 */
 .section {
   padding: 90px 0;
 }
@@ -49,9 +45,7 @@ ul {
   list-style: none;
 }
 
-/*----------
- header 
- -----------*/
+/* ヘッダー */
 .header {
   width: 100%;
   background-color: #ffffff;
@@ -59,16 +53,16 @@ ul {
 
 .header-top {
   display: flex;
-  flex-direction: column; 
-  align-items: flex-start; 
-  gap: 10px; 
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .header .container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 40px; 
+  gap: 40px;
   padding: 20px 40px;
 }
 
@@ -77,13 +71,11 @@ ul {
 }
 
 .header-logo img {
-  width: 100px; 
-  height: auto; 
+  width: 100px;
+  height: auto;
 }
 
-/*----------
-ナビゲーションメニュー
-------------*/
+/* ナビゲーション */
 .gnav-list {
   display: flex;
   gap: 20px;
@@ -116,9 +108,55 @@ ul {
   width: 100%;
 }
 
-/*---------------------------------
- Backボタン (footerの上)
----------------------------------*/
+/* アーティスト詳細ページ */
+.artist-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.artist-text-col {
+  width: 48%;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.artist-sub-title {
+  display: block;
+  font-size: 13px;
+  color: #797979;
+  margin-bottom: 8px;
+}
+
+.artist-name {
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  margin-bottom: 40px;
+  color: #1a1a1a;
+}
+
+.artist-bio p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #444444;
+  margin-bottom: 28px;
+}
+
+.artist-img-col {
+  width: 48%;
+  flex-shrink: 0;
+}
+
+.artist-img-col img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* 戻るボタン */
 .back-btn-container {
   display: flex;
   justify-content: center;
@@ -152,9 +190,7 @@ ul {
   color: #ffffff;
 }
 
-/*----------
-footer
-------------*/
+/* フッター */
 .footer {
   padding: 30px;
   background-color: #ffffff;
@@ -166,62 +202,16 @@ footer
   color: #797979;
 }
 
-/*----------
- アーティスト詳細ページ
- ----------- */
-.artist-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* ★上下中央揃えに設定 */
-  gap: 40px;
-  width: 100%;
-}
-
-/* 左側：テキストエリア */
-.artist-text-col {
-  width: 48%; /* 全体の約半分 */
-  flex-shrink: 1;
-  min-width: 0;
-}
-
-.artist-sub-title {
-  display: block;
-  font-size: 13px;
-  color: #797979;
-  margin-bottom: 8px;
-}
-
-.artist-name {
-  font-size: 36px;
-  font-weight: bold;
-  letter-spacing: 0.05em;
-  margin-bottom: 40px;
-  color: #1a1a1a;
-}
-
-.artist-bio p {
-  font-size: 14px; /* 文字サイズは変えずにそのまま */
-  line-height: 1.9;
-  color: #444444;
-  margin-bottom: 28px;
-}
-
-/* 右側：画像エリア（大きめ表示） */
-.artist-img-col {
-  width: 48%;
-  flex-shrink: 0;
-}
-
-.artist-img-col img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-/*----------
- レスポンシブ（スマホ表示：768px以下）
- ----------- */
+/* レスポンシブ（768px以下） */
 @media screen and (max-width: 768px) {
+  .pc-only {
+    display: none;
+  }
+
+  .sp-only {
+    display: block;
+  }
+
   .section {
     padding: 50px 0;
   }
@@ -238,11 +228,11 @@ footer
 
   .header-logo img {
     width: 50px;
-    height: auto; 
+    height: auto;
   }
 
   .artist-inner {
-    flex-direction: column; /* スマホは縦並び */
+    flex-direction: column;
     gap: 30px;
   }
 
@@ -250,7 +240,6 @@ footer
     width: 100%;
   }
 
-  /* ★スマホ表示での本文サイズ調整 */
   .artist-bio p {
     font-size: 10px;
     line-height: 1.8;
@@ -271,13 +260,5 @@ footer
     width: 150px;
     padding: 10px 0;
     font-size: 16px;
-  }
-
-  .pc-only {
-    display: none;
-  }
-
-  .sp-only {
-    display: block;
   }
 }
